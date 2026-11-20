@@ -1,7 +1,15 @@
 /* ==========================================================================
    NatřiTo – základní styly (společné pro všechny návrhy)
-   Vzhled se řídí proměnnými v :root, které přepisují soubory theme-*.css
+   Barvy a písma jsou v proměnných v :root, vzhled „Dřevo a len“ je na konci souboru
    ========================================================================== */
+
+/* Písma hostovaná přímo na webu (Fraunces, Source Sans 3 – licence SIL OFL) */
+@font-face { font-family: "Fraunces"; font-style: italic; font-weight: 100 900; font-display: swap; src: url("../fonts/fraunces-italic-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Fraunces"; font-style: italic; font-weight: 100 900; font-display: swap; src: url("../fonts/fraunces-italic-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("../fonts/fraunces-normal-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("../fonts/fraunces-normal-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Source Sans 3"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("../fonts/sourcesans3-normal-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Source Sans 3"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("../fonts/sourcesans3-normal-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 :root {
   --bg: #fff;
@@ -265,7 +273,7 @@ mark { background: #fff3a0; color: #000; padding: 0 .25em; border-radius: 3px; }
 @media (max-width: 860px) { .contact__inner { grid-template-columns: 1fr; } }
 
 /* ---------- Patička ---------- */
-.site-footer { padding: 40px 0 96px; border-top: 1px solid var(--line); font-size: .92rem; color: var(--muted); }
+.site-footer { padding: 40px 0; border-top: 1px solid var(--line); font-size: .92rem; color: var(--muted); }
 .site-footer__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; }
 .site-footer p { margin: 0; }
 .site-footer p:last-child { margin-left: auto; }
@@ -290,18 +298,6 @@ mark { background: #fff3a0; color: #000; padding: 0 .25em; border-radius: 3px; }
   .lightbox__prev, .lightbox__next { top: auto; bottom: 16px; transform: none; }
 }
 
-/* ---------- PROTOTYP: přepínač návrhů ---------- */
-.theme-switch {
-  position: fixed; z-index: 60; left: 50%; bottom: 16px; transform: translateX(-50%);
-  display: flex; align-items: center; gap: 4px; padding: 6px;
-  background: #111; color: #fff; border-radius: 999px; box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
-  font: 600 .85rem/1 system-ui, sans-serif;
-}
-.theme-switch__label { padding: 0 8px 0 10px; opacity: .7; }
-.theme-switch button { border: 0; border-radius: 999px; padding: 10px 14px; background: transparent; color: #fff; font: inherit; cursor: pointer; white-space: nowrap; }
-.theme-switch button:hover { background: #333; }
-.theme-switch button[aria-pressed="true"] { background: #fff; color: #111; }
-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
@@ -321,3 +317,60 @@ mark { background: #fff3a0; color: #000; padding: 0 .25em; border-radius: 3px; }
 .article__byline { color: var(--muted); }
 .article__back { clear: both; display: flex; flex-wrap: wrap; gap: 12px; margin-top: 3em; }
 @media (max-width: 560px) { .article__figure--right { float: none; width: 100%; margin: 1.5em 0; } }
+
+/* ==========================================================================
+   Vzhled „Dřevo a len“
+   Teplý řemeslný styl: lněné pozadí, tmavě hnědé písmo, jantarová (lazurová)
+   akcentní barva, patkové nadpisy. Hero přes celou šířku s fotkou srubu.
+   ========================================================================== */
+
+:root {
+  --bg: #f8f3eb;
+  --surface: #efe5d6;
+  --surface-2: #e4d5bf;
+  --text: #2a1d14;
+  --muted: #6b5747;
+  --line: #dccbb3;
+  --accent: #9a4c1a;
+  --accent-hover: #7b3c13;
+  --on-accent: #fff;
+  --head-bg: rgba(248, 243, 235, .93);
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --font-head: "Fraunces", Georgia, serif;
+  --head-weight: 650;
+  --radius: 6px;
+  --radius-lg: 10px;
+}
+
+/* Hero přes celou šířku */
+.hero { min-height: min(90vh, 860px); display: grid; color: #fff8ee; background: #2a1d14; }
+.hero__media { position: absolute; inset: 0; background-image: url("../img/hero/srub-s-balkonem-2000.webp"); background-position: center 40%; }
+.hero__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(30, 18, 10, .88) 0%, rgba(30, 18, 10, .6) 45%, rgba(30, 18, 10, .1) 80%), linear-gradient(0deg, rgba(30, 18, 10, .75) 0%, rgba(30, 18, 10, 0) 40%); }
+.hero__inner { position: relative; display: flex; flex-direction: column; justify-content: flex-end; gap: 48px; padding-top: 120px; padding-bottom: 44px; }
+.hero__content { max-width: 680px; }
+.hero__eyebrow { color: #f0c58c; }
+.hero__title { font-weight: 500; }
+.hero__title span { font-style: italic; color: #f0c58c; }
+.hero .btn--ghost { color: #fff8ee; }
+.hero .btn--ghost:hover { color: #f0c58c; }
+.hero__facts { padding-top: 24px; border-top: 1px solid rgba(255, 248, 238, .25); }
+.hero__facts strong { color: #f0c58c; font-weight: 500; }
+@media (max-width: 700px) {
+  .hero__media { background-image: url("../img/hero/srub-s-balkonem-1200.webp"); background-position: 30% center; }
+  .hero__media::after { background: linear-gradient(0deg, rgba(30, 18, 10, .92) 10%, rgba(30, 18, 10, .45) 70%, rgba(30, 18, 10, .2) 100%); }
+}
+
+/* Jemná „letokruhová“ textura v pozadí světlých sekcí */
+.process, .about {
+  background-color: var(--surface);
+  background-image: repeating-radial-gradient(ellipse at -10% 120%, transparent 0 22px, rgba(122, 82, 44, .045) 22px 23px);
+}
+.service { background: #fffaf3; border: 1px solid var(--line); }
+.section__kicker { font-family: var(--font-body); }
+.section__title { font-weight: 500; }
+.tip { background: #3b2a1e; color: #f8efe2; }
+.tip__title { color: #f0c58c; }
+.step__num { font-family: var(--font-head); }
+.quote p { font-weight: 500; }
+.site-footer { background: #2a1d14; color: #cdbba5; border-top: 0; }
+.site-footer .stripes { opacity: .9; }

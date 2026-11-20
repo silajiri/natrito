@@ -82,23 +82,4 @@
     });
   }
 
-  /* ---------- PROTOTYP: přepínač návrhů (ve finální verzi odstranit) ---------- */
-  var sw = document.querySelector('.theme-switch');
-  if (sw) {
-    var mark = function () {
-      var t = document.documentElement.dataset.theme;
-      sw.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.setTheme === t)); });
-    };
-    sw.addEventListener('click', function (e) {
-      var b = e.target.closest('button[data-set-theme]');
-      if (!b) return;
-      var v = b.dataset.setTheme;
-      document.documentElement.dataset.theme = v;
-      document.getElementById('theme-css').href = 'css/theme-' + v + '.css';
-      try { localStorage.setItem('natrito-theme', v); } catch (err) { /* nevadí */ }
-      var u = new URL(location.href); u.searchParams.set('v', v); history.replaceState(null, '', u);
-      mark();
-    });
-    mark();
-  }
 })();

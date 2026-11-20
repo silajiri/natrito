@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="cs" data-theme="a">
+<html lang="cs">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,18 +15,9 @@
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <meta name="theme-color" content="#3b2a1e">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/theme-a.css" id="theme-css">
-  <script>
-    /* PROTOTYP: přepínání návrhů vzhledu (?v=a|b|c). Ve finální verzi se odstraní. */
-    (function () {
-      var v = (new URLSearchParams(location.search).get('v') || '').toLowerCase();
-      try { if (!/^[abc]$/.test(v)) v = localStorage.getItem('natrito-theme') || 'a'; } catch (e) { v = v || 'a'; }
-      if (!/^[abc]$/.test(v)) v = 'a';
-      document.documentElement.dataset.theme = v;
-      document.getElementById('theme-css').href = 'css/theme-' + v + '.css';
-    })();
-  </script>
+  <link rel="preload" href="fonts/fraunces-normal-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/sourcesans3-normal-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -165,7 +156,7 @@
             <p>Starý nátěr a&nbsp;zašedlou vrstvu odstraníme ručním broušením. Na rozdíl od tryskání lze lépe opracovat i&nbsp;nerovnosti trámů.</p>
           </li>
           <li class="step">
-            <img class="step__img" src="img/proces/sparovani-800.webp" width="800" height="600" alt="Roubenka s novým nátěrem a vyspárovanými mezerami mezi trámy" loading="lazy">
+            <img class="step__img" src="img/proces/opravy-800.webp" width="800" height="1422" alt="Obroušená stěna srubu připravená na opravy a nátěr" loading="lazy">
             <span class="step__num">3</span>
             <h3 class="step__title">Opravy a&nbsp;spárování</h3>
             <p>Utěsníme praskliny a&nbsp;spáry, ošetříme poškozená místa a&nbsp;čela kulatin, aby nový nátěr měl pevný základ.</p>
@@ -270,17 +261,20 @@
     <p class="project__place">květen 2023</p>
   </div>
 </li>
-<li class="project">
-  <a class="project__link" href="img/realizace/2022-05-renovace-roubenky-01.webp" data-lightbox="2022-05-renovace-roubenky" data-i="0" data-caption="Renovace nátěru roubenky – Přebroušení zašedlého dřeva a nový nátěr (1/3)">
-    <img src="img/realizace/2022-05-renovace-roubenky-01-t.webp" width="720" height="540" alt="Renovace nátěru roubenky" loading="lazy" decoding="async">
+<li class="project project--story">
+  <a class="project__link" href="img/realizace/2022-05-renovace-roubenky-02.webp" data-lightbox="2022-05-renovace-roubenky" data-i="1" data-caption="Renovace nátěru roubenky – po nátěru (2/3)">
+    <img src="img/realizace/2022-05-renovace-roubenky-02-t.webp" width="720" height="540" alt="Renovace nátěru roubenky" loading="lazy" decoding="async">
     <span class="project__count">3 fotky</span>
+  </a>
+  <a class="project__before" href="img/realizace/2022-05-renovace-roubenky-01.webp" data-lightbox="2022-05-renovace-roubenky" data-i="0" data-caption="Renovace nátěru roubenky – původní stav (1/3)">
+    <img src="img/realizace/2022-05-renovace-roubenky-01-t.webp" alt="Původní stav – Renovace nátěru roubenky" loading="lazy" decoding="async"><span>před</span>
   </a>
   <div class="project__meta">
     <h3 class="project__title">Renovace nátěru roubenky</h3>
-    <p class="project__desc">Přebroušení zašedlého dřeva a nový nátěr</p>
+    <p class="project__desc">Zašedlé dřevo jsme přebrousili a roubenku natřeli v teplém hnědém odstínu.</p>
     <p class="project__place">květen 2022</p>
   </div>
-  <div hidden><a href="img/realizace/2022-05-renovace-roubenky-02.webp" data-lightbox="2022-05-renovace-roubenky" data-i="1" data-caption="Renovace nátěru roubenky – Přebroušení zašedlého dřeva a nový nátěr (2/3)"></a><a href="img/realizace/2022-05-renovace-roubenky-03.webp" data-lightbox="2022-05-renovace-roubenky" data-i="2" data-caption="Renovace nátěru roubenky – Přebroušení zašedlého dřeva a nový nátěr (3/3)"></a></div>
+  <div hidden><a href="img/realizace/2022-05-renovace-roubenky-03.webp" data-lightbox="2022-05-renovace-roubenky" data-i="2" data-caption="Renovace nátěru roubenky – po nátěru (3/3)"></a></div>
 </li>
 <li class="project">
   <a class="project__link" href="img/realizace/2021-06-srub-sedy-odstin-01.webp" data-lightbox="2021-06-srub-sedy-odstin" data-i="0" data-caption="Srub v šedém odstínu – Venkovní nátěr srubu (1/2)">
@@ -313,17 +307,6 @@
           <summary class="more__summary"><span>Starší realizace srubů a roubenek</span></summary>
           <ul class="projects projects--compact">
 <!-- gen:archiv -->
-<li class="project">
-  <a class="project__link" href="img/realizace/archiv-vysehori-01.webp" data-lightbox="archiv-vysehori" data-i="0" data-caption="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený (1/6)">
-    <img src="img/realizace/archiv-vysehori-01-t.webp" width="720" height="540" alt="Vyšehoří" loading="lazy" decoding="async">
-    <span class="project__count">6 fotek</span>
-  </a>
-  <div class="project__meta">
-    <h3 class="project__title">Vyšehoří</h3>
-    <p class="project__desc">Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený</p>
-  </div>
-  <div hidden><a href="img/realizace/archiv-vysehori-02.webp" data-lightbox="archiv-vysehori" data-i="1" data-caption="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený (2/6)"></a><a href="img/realizace/archiv-vysehori-03.webp" data-lightbox="archiv-vysehori" data-i="2" data-caption="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený (3/6)"></a><a href="img/realizace/archiv-vysehori-04.webp" data-lightbox="archiv-vysehori" data-i="3" data-caption="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený (4/6)"></a><a href="img/realizace/archiv-vysehori-05.webp" data-lightbox="archiv-vysehori" data-i="4" data-caption="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený (5/6)"></a><a href="img/realizace/archiv-vysehori-06.webp" data-lightbox="archiv-vysehori" data-i="5" data-caption="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený (6/6)"></a></div>
-</li>
 <li class="project">
   <a class="project__link" href="img/realizace/archiv-loucna-pod-klinovcem-01.webp" data-lightbox="archiv-loucna-pod-klinovcem" data-i="0" data-caption="Loučná pod Klínovcem – Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit (1/4)">
     <img src="img/realizace/archiv-loucna-pod-klinovcem-01-t.webp" width="720" height="540" alt="Loučná pod Klínovcem" loading="lazy" decoding="async">
@@ -468,16 +451,6 @@
   <div hidden><a href="img/realizace/archiv-ktis-02.webp" data-lightbox="archiv-ktis" data-i="1" data-caption="Ktiš – Venkovní nátěr Kreidezeit · Interiér: včelí vosk Kreidezeit (2/3)"></a><a href="img/realizace/archiv-ktis-03.webp" data-lightbox="archiv-ktis" data-i="2" data-caption="Ktiš – Venkovní nátěr Kreidezeit · Interiér: včelí vosk Kreidezeit (3/3)"></a></div>
 </li>
 <li class="project">
-  <a class="project__link" href="img/realizace/archiv-zdimerice-01.webp" data-lightbox="archiv-zdimerice" data-i="0" data-caption="Zdiměřice – Spárování a nátěr roubenky · Spárování a venkovní nátěr">
-    <img src="img/realizace/archiv-zdimerice-01-t.webp" width="720" height="540" alt="Zdiměřice" loading="lazy" decoding="async">
-    <span class="project__count">1 fotka</span>
-  </a>
-  <div class="project__meta">
-    <h3 class="project__title">Zdiměřice</h3>
-    <p class="project__desc">Spárování a nátěr roubenky · Spárování a venkovní nátěr</p>
-  </div>
-</li>
-<li class="project">
   <a class="project__link" href="img/realizace/archiv-bojanovice-01.webp" data-lightbox="archiv-bojanovice" data-i="0" data-caption="Bojanovice – Nátěr Kreidezeit · Srub (1/2)">
     <img src="img/realizace/archiv-bojanovice-01-t.webp" width="720" height="960" alt="Bojanovice" loading="lazy" decoding="async">
     <span class="project__count">2 fotky</span>
@@ -549,6 +522,15 @@
   </div>
 </li>
 <li class="project">
+  <a class="project__link" href="img/realizace/ostatni-fasada-rodinneho-domu-01.webp" data-lightbox="ostatni-fasada-rodinneho-domu" data-i="0" data-caption="Nátěr fasády rodinného domu">
+    <img src="img/realizace/ostatni-fasada-rodinneho-domu-01-t.webp" width="720" height="541" alt="Nátěr fasády rodinného domu" loading="lazy" decoding="async">
+    <span class="project__count">1 fotka</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Nátěr fasády rodinného domu</h3>
+  </div>
+</li>
+<li class="project">
   <a class="project__link" href="img/realizace/ostatni-klempirske-prvky-01.webp" data-lightbox="ostatni-klempirske-prvky" data-i="0" data-caption="Hradec Králové – Nátěr klempířských prvků">
     <img src="img/realizace/ostatni-klempirske-prvky-01-t.webp" width="720" height="544" alt="Hradec Králové" loading="lazy" decoding="async">
     <span class="project__count">1 fotka</span>
@@ -582,7 +564,7 @@
 </li>
 <li class="project">
   <a class="project__link" href="img/realizace/ostatni-cyklony-potstejn-01.webp" data-lightbox="ostatni-cyklony-potstejn" data-i="0" data-caption="Zima Potštejn – Nátěr cyklonů (1/3)">
-    <img src="img/realizace/ostatni-cyklony-potstejn-01-t.webp" width="544" height="696" alt="Zima Potštejn" loading="lazy" decoding="async">
+    <img src="img/realizace/ostatni-cyklony-potstejn-01-t.webp" width="544" height="800" alt="Zima Potštejn" loading="lazy" decoding="async">
     <span class="project__count">3 fotky</span>
   </a>
   <div class="project__meta">
@@ -593,7 +575,7 @@
 </li>
 <li class="project">
   <a class="project__link" href="img/realizace/ostatni-matrix-01.webp" data-lightbox="ostatni-matrix" data-i="0" data-caption="Matrix a.s. – Nátěr cyklonu, zásobníku a vstupu (1/3)">
-    <img src="img/realizace/ostatni-matrix-01-t.webp" width="530" height="696" alt="Matrix a.s." loading="lazy" decoding="async">
+    <img src="img/realizace/ostatni-matrix-01-t.webp" width="530" height="800" alt="Matrix a.s." loading="lazy" decoding="async">
     <span class="project__count">3 fotky</span>
   </a>
   <div class="project__meta">
@@ -604,7 +586,7 @@
 </li>
 <li class="project">
   <a class="project__link" href="img/realizace/ostatni-zasobniky-dzv-01.webp" data-lightbox="ostatni-zasobniky-dzv" data-i="0" data-caption="DŽV Rychnov nad Kněžnou – Nátěr zásobníků">
-    <img src="img/realizace/ostatni-zasobniky-dzv-01-t.webp" width="800" height="453" alt="DŽV Rychnov nad Kněžnou" loading="lazy" decoding="async">
+    <img src="img/realizace/ostatni-zasobniky-dzv-01-t.webp" width="800" height="521" alt="DŽV Rychnov nad Kněžnou" loading="lazy" decoding="async">
     <span class="project__count">1 fotka</span>
   </a>
   <div class="project__meta">
@@ -614,7 +596,7 @@
 </li>
 <li class="project">
   <a class="project__link" href="img/realizace/ostatni-dopravnik-01.webp" data-lightbox="ostatni-dopravnik" data-i="0" data-caption="Agro Pelhřimov – Nátěr dopravníku">
-    <img src="img/realizace/ostatni-dopravnik-01-t.webp" width="800" height="484" alt="Agro Pelhřimov" loading="lazy" decoding="async">
+    <img src="img/realizace/ostatni-dopravnik-01-t.webp" width="776" height="540" alt="Agro Pelhřimov" loading="lazy" decoding="async">
     <span class="project__count">1 fotka</span>
   </a>
   <div class="project__meta">
@@ -788,11 +770,9 @@
           <p class="contact__name">Pavel Ehl</p>
           <a class="contact__big" href="tel:+420777149562">+420 777 149 562</a>
           <a class="contact__big" href="mailto:natrito@seznam.cz?subject=Popt%C3%A1vka%20%E2%80%93%20n%C3%A1t%C4%9Br">natrito@seznam.cz</a>
-          <address>Domašín 95<br>518 01 Dobruška</address>
-          <p class="contact__small">IČO: 10501916 · podnikatel zapsaný v&nbsp;živnostenském rejstříku</p>
           <div class="contact__actions">
             <a class="btn btn--primary" href="mailto:natrito@seznam.cz?subject=Popt%C3%A1vka%20%E2%80%93%20n%C3%A1t%C4%9Br">Napsat e-mail</a>
-            <a class="btn btn--ghost" href="https://mapy.cz/zakladni?q=Doma%C5%A1%C3%ADn%2095%2C%20Dobru%C5%A1ka" rel="noopener" target="_blank">Zobrazit na mapě</a>
+            <a class="btn btn--ghost" href="tel:+420777149562">Zavolat</a>
           </div>
         </div>
       </div>
@@ -802,7 +782,7 @@
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <span class="stripes stripes--small" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      <p>© <span data-year>2026</span> Pavel Ehl – NatřiTo · malířské a&nbsp;natěračské práce · IČO 10501916</p>
+      <p>© <span data-year>2026</span> Pavel Ehl – NatřiTo · IČO 10501916 · Domašín 95, 518 01 Dobruška · zapsán v&nbsp;živnostenském rejstříku</p>
       <p><a href="tel:+420777149562">+420 777 149 562</a> · <a href="mailto:natrito@seznam.cz">natrito@seznam.cz</a></p>
     </div>
   </footer>
@@ -818,13 +798,6 @@
     <button class="lightbox__btn lightbox__close" aria-label="Zavřít">×</button>
   </dialog>
 
-  <!-- PROTOTYP: přepínač návrhů -->
-  <div class="theme-switch" role="group" aria-label="Návrh vzhledu">
-    <span class="theme-switch__label">Návrh:</span>
-    <button data-set-theme="a" title="Dřevo a len – teplý řemeslný styl">A&nbsp;Dřevo</button>
-    <button data-set-theme="b" title="Severský – moderní, vzdušný">B&nbsp;Sever</button>
-    <button data-set-theme="c" title="Barvy loga – výrazný, kontrastní">C&nbsp;Barvy</button>
-  </div>
 
   <script src="js/main.js" defer></script>
 </body>

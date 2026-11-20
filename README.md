@@ -8,8 +8,8 @@ Statický web pro www.natrito.cz (broušení a nátěry srubů a roubenek – Pa
 ```
 index.html            hlavní stránka (jednostránkový web)
 clanky/               převzaté články z původního webu
-css/base.css          rozvržení a komponenty
-css/theme-a|b|c.css   tři návrhy vzhledu (PROTOTYP – po výběru zůstane jeden)
+css/style.css         veškeré styly (vzhled „Dřevo a len“)
+fonts/                písma hostovaná na webu (Fraunces, Source Sans 3)
 js/main.js            menu, prohlížeč fotek
 img/                  zpracované obrázky pro web (generuje tools/build.py)
 favicon.ico, img/favicon.svg, img/apple-touch-icon.png
@@ -22,6 +22,7 @@ assets/               originály (NEJSOU v gitu)
 
 1. Nahrajte originální fotky do `assets/images/`.
 2. Do `tools/realizace.json` přidejte položku do sekce `realizace` (nejnovější nahoru):
+   Fotky řaďte tak, jak šly práce za sebou; u renovací lze uvést fázi `"stage": "pred" | "behem" | "po"`.
    ```json
    { "id": "2025-06-srub-hrabova", "title": "Srub v ořechovém odstínu", "place": "Hrabová",
      "desc": "Broušení a nátěr Remmers", "date": "2025-06",
@@ -36,7 +37,7 @@ assets/               originály (NEJSOU v gitu)
 ```
 python -m http.server 8765
 ```
-a otevřít http://127.0.0.1:8765/ (návrhy: `?v=a`, `?v=b`, `?v=c`).
+a otevřít http://127.0.0.1:8765/
 
 ## Nasazení
 

@@ -148,12 +148,21 @@
         "id": "2022-05-renovace-roubenky",
         "title": "Renovace nátěru roubenky",
         "place": "",
-        "desc": "Přebroušení zašedlého dřeva a nový nátěr",
+        "desc": "Zašedlé dřevo jsme přebrousili a roubenku natřeli v teplém hnědém odstínu.",
         "date": "2022-05",
         "photos": [
-          "assets/images/IMG-20220506-WA0002.jpg",
-          "assets/images/IMG-20220506-WA0003.jpg",
-          "assets/images/IMG-20220424-WA0001.jpg"
+          {
+            "src": "assets/images/IMG-20220424-WA0001.jpg",
+            "stage": "pred"
+          },
+          {
+            "src": "assets/images/IMG-20220506-WA0002.jpg",
+            "stage": "po"
+          },
+          {
+            "src": "assets/images/IMG-20220506-WA0003.jpg",
+            "stage": "po"
+          }
         ],
         "crop": {
           "assets/images/IMG-20220424-WA0001.jpg": [
@@ -188,20 +197,6 @@
       }
     ],
     "archiv": [
-      {
-        "id": "archiv-vysehori",
-        "title": "Broušení a nátěr srubu",
-        "place": "Vyšehoří",
-        "desc": "Zašedlý srub přebroušený a znovu natřený",
-        "photos": [
-          "assets/mess/vysehori-06.jpg",
-          "assets/mess/vysehori-01.jpg",
-          "assets/mess/vysehori-02.jpg",
-          "assets/mess/vysehori-03.jpg",
-          "assets/mess/vysehori-04.jpg",
-          "assets/mess/vysehori-05.jpg"
-        ]
-      },
       {
         "id": "archiv-loucna-pod-klinovcem",
         "title": "Broušení a nátěr Remmers",
@@ -351,15 +346,6 @@
         ]
       },
       {
-        "id": "archiv-zdimerice",
-        "title": "Spárování a nátěr roubenky",
-        "place": "Zdiměřice",
-        "desc": "Spárování a venkovní nátěr",
-        "photos": [
-          "assets/mess/zdimerice-nater a sparovani srubu.jpg"
-        ]
-      },
-      {
         "id": "archiv-bojanovice",
         "title": "Nátěr Kreidezeit",
         "place": "Bojanovice",
@@ -423,6 +409,15 @@
         ]
       },
       {
+        "id": "ostatni-fasada-rodinneho-domu",
+        "title": "Nátěr fasády rodinného domu",
+        "place": "",
+        "desc": "",
+        "photos": [
+          "assets/mess/fasada1.jpg"
+        ]
+      },
+      {
         "id": "ostatni-klempirske-prvky",
         "title": "Nátěr klempířských prvků",
         "place": "Hradec Králové",
@@ -438,16 +433,8 @@
         "desc": "",
         "photos": [
           "assets/mess/hala.jpg",
-          "assets/mess/watermark/hala-kerson.jpg"
-        ],
-        "crop": {
-          "assets/mess/watermark/hala-kerson.jpg": [
-            0,
-            0,
-            0,
-            13
-          ]
-        }
+          "assets/mess/hospodarske/new-6.jpg"
+        ]
       },
       {
         "id": "ostatni-zeas-trnov",
@@ -456,14 +443,14 @@
         "desc": "",
         "photos": [
           "assets/mess/hospodarske/silo-zeas-trnov.jpg",
-          "assets/mess/watermark/nater-strecha-ZEAS.jpg"
+          "assets/mess/hospodarske/práce 012.jpg"
         ],
         "crop": {
-          "assets/mess/watermark/nater-strecha-ZEAS.jpg": [
+          "assets/mess/hospodarske/práce 012.jpg": [
             0,
             0,
             0,
-            13
+            14
           ]
         }
       },
@@ -473,30 +460,10 @@
         "place": "Zima Potštejn",
         "desc": "",
         "photos": [
-          "assets/mess/watermark/nater-cyklon-1.jpg",
-          "assets/mess/watermark/nater-cyklon-2.jpg",
-          "assets/mess/watermark/nater-cyklon-3.jpg"
-        ],
-        "crop": {
-          "assets/mess/watermark/nater-cyklon-1.jpg": [
-            0,
-            0,
-            0,
-            13
-          ],
-          "assets/mess/watermark/nater-cyklon-2.jpg": [
-            0,
-            0,
-            0,
-            13
-          ],
-          "assets/mess/watermark/nater-cyklon-3.jpg": [
-            0,
-            0,
-            0,
-            13
-          ]
-        }
+          "assets/mess/hospodarske/new-34.jpg",
+          "assets/mess/hospodarske/new-35.jpg",
+          "assets/mess/hospodarske/new-36.jpg"
+        ]
       },
       {
         "id": "ostatni-matrix",
@@ -504,24 +471,10 @@
         "place": "Matrix a.s.",
         "desc": "",
         "photos": [
-          "assets/mess/watermark/nater-cyklon-4.jpg",
-          "assets/mess/watermark/nater-zasobnik-matrix.jpg",
+          "assets/mess/hospodarske/sejmout0003.jpg",
+          "assets/mess/hospodarske/sejmout0002.jpg",
           "assets/mess/matrix.jpg"
-        ],
-        "crop": {
-          "assets/mess/watermark/nater-cyklon-4.jpg": [
-            0,
-            0,
-            0,
-            13
-          ],
-          "assets/mess/watermark/nater-zasobnik-matrix.jpg": [
-            0,
-            0,
-            0,
-            13
-          ]
-        }
+        ]
       },
       {
         "id": "ostatni-zasobniky-dzv",
@@ -529,16 +482,8 @@
         "place": "DŽV Rychnov nad Kněžnou",
         "desc": "",
         "photos": [
-          "assets/mess/watermark/nater-zasobnik-dzv.jpg"
-        ],
-        "crop": {
-          "assets/mess/watermark/nater-zasobnik-dzv.jpg": [
-            0,
-            0,
-            0,
-            13
-          ]
-        }
+          "assets/mess/hospodarske/sejmout0006.jpg"
+        ]
       },
       {
         "id": "ostatni-dopravnik",
@@ -546,16 +491,8 @@
         "place": "Agro Pelhřimov",
         "desc": "",
         "photos": [
-          "assets/mess/watermark/nater-dopravniku.jpg"
-        ],
-        "crop": {
-          "assets/mess/watermark/nater-dopravniku.jpg": [
-            0,
-            0,
-            0,
-            13
-          ]
-        }
+          "assets/mess/hospodarske/new-13.jpg"
+        ]
       },
       {
         "id": "ostatni-epoxidova-podlaha",
@@ -640,13 +577,6 @@
       ]
     },
     {
-      "src": "assets/mess/zdimerice-nater a sparovani srubu.jpg",
-      "out": "img/proces/sparovani",
-      "widths": [
-        800
-      ]
-    },
-    {
       "src": "assets/images/IMG-20240428-WA0003.jpg",
       "out": "img/proces/hotovo",
       "widths": [
@@ -670,6 +600,13 @@
     {
       "src": "assets/images/20240917_152353.jpg",
       "out": "img/proces/pribeh-3-hotovo",
+      "widths": [
+        800
+      ]
+    },
+    {
+      "src": "assets/images/IMG-20240331-WA0010.jpg",
+      "out": "img/proces/opravy",
       "widths": [
         800
       ]
