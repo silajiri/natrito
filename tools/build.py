@@ -173,6 +173,23 @@ def card_html(p, outs, place_first=False):
     )
 
 
+def cz_key(text):
+    """Řazení podle české abecedy (č za c, ř za r, š za s, ž za z, ch za h)."""
+    t = text.lower()
+    letters = ["a", "b", "c", "č", "d", "e", "f", "g", "h", "ch", "i", "j", "k", "l", "m", "n", "o", "p", "q",
+               "r", "ř", "s", "š", "t", "u", "v", "w", "x", "y", "z", "ž"]
+    base = str.maketrans("áďéěíňóťúůý", "adeeinotuuy")
+    key, i = [], 0
+    while i < len(t):
+        if t.startswith("ch", i):
+            key.append(letters.index("ch")); i += 2; continue
+        c = t[i]
+        c2 = c if c in letters else c.translate(base)
+        key.append(letters.index(c2) if c2 in letters else 100 + ord(c2))
+        i += 1
+    return key
+
+
 def map_html():
     """Mapa ČR s obcemi, kde jsme pracovali (inline SVG, bez externích skriptů).
     Každá obec odkazuje na Mapy.cz. Data: tools/mista.json a tools/cz-hranice.json."""
@@ -207,8 +224,12 @@ def map_html():
            f'<path class="map__land" d="{d}"/>' + "".join(marks) + "</svg>")
     items = "".join(
         f'<li><a href="https://mapy.cz/zakladni?q={urllib.parse.quote(m["obec"])}&x={m["lon"]}&y={m["lat"]}&z=12" '
-        f'target="_blank" rel="noopener">{e(m["obec"])}</a></li>' for m in sorted(mista, key=lambda m: m["obec"]))
-    return svg + f'\n<ul class="map__list">{items}</ul>'
+        f'target="_blank" rel="noopener">{e(m["obec"])}</a></li>' for m in sorted(mista, key=lambda m: cz_key(m["obec"])))
+    # data pro interaktivní mapu Mapy.com (načítá se až po kliknutí, viz js/main.js)
+    data = json.dumps([{"obec": m["obec"], "lat": m["lat"], "lon": m["lon"], "sidlo": bool(m.get("sidlo"))}
+                       for m in sorted(mista, key=lambda m: cz_key(m["obec"]))], ensure_ascii=False)
+    return (svg + f'\n<ul class="map__list">{items}</ul>'
+            + f'\n<script type="application/json" id="mista-data">{data}</script>')
 
 
 def cleanup(used):

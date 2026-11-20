@@ -82,4 +82,83 @@
     });
   }
 
+  /* ---------- Interaktivní mapa Mapy.com (načte se až po kliknutí) ---------- */
+  var mapBtn = document.querySelector('.map__open');
+  var mapBox = document.getElementById('mapa-live');
+  var dataEl = document.getElementById('mista-data');
+  if (mapBtn && mapBox && dataEl) {
+    var loadOnce = function (tag, attrs) {
+      return new Promise(function (resolve, reject) {
+        var el = document.createElement(tag);
+        Object.keys(attrs).forEach(function (k) { el[k] = attrs[k]; });
+        el.onload = resolve; el.onerror = reject;
+        document.head.appendChild(el);
+      });
+    };
+
+    mapBtn.addEventListener('click', function () {
+      if (mapBox.dataset.ready) return;
+      mapBtn.disabled = true;
+      mapBtn.textContent = 'Načítám mapu…';
+      Promise.all([
+        loadOnce('link', { rel: 'stylesheet', href: 'vendor/leaflet/leaflet.css' }),
+        loadOnce('script', { src: 'vendor/leaflet/leaflet.js' })
+      ]).then(function () {
+        var L = window.L;
+        var key = mapBtn.dataset.mapyKey;
+        var mista = JSON.parse(dataEl.textContent);
+        var svg = document.querySelector('.map__svg');
+
+        if (svg) { svg.parentNode.insertBefore(mapBox, svg); svg.style.display = 'none'; }
+        mapBox.hidden = false;
+        mapBtn.parentNode.hidden = true;
+        mapBox.dataset.ready = '1';
+
+        var map = L.map(mapBox, { scrollWheelZoom: false });
+        var retina = window.devicePixelRatio > 1 ? '@2x' : '';
+        L.tileLayer('https://api.mapy.com/v1/maptiles/basic/256' + retina + '/{z}/{x}/{y}?lang=cs&apikey=' + key, {
+          minZoom: 5, maxZoom: 16,
+          attribution: '<a href="https://api.mapy.com/copyright" target="_blank" rel="noopener">&copy; Seznam.cz a.s. a další</a>'
+        }).addTo(map);
+
+        // povinné logo Mapy.com
+        var Logo = L.Control.extend({
+          options: { position: 'bottomleft' },
+          onAdd: function () {
+            var a = L.DomUtil.create('a', 'map__mapy-logo');
+            a.href = 'https://mapy.com/'; a.target = '_blank'; a.rel = 'noopener';
+            a.innerHTML = '<img src="https://api.mapy.com/img/api/logo.svg" alt="Mapy.com" width="100" height="30">';
+            L.DomEvent.disableClickPropagation(a);
+            return a;
+          }
+        });
+        new Logo().addTo(map);
+
+        var bounds = [];
+        mista.forEach(function (m) {
+          var ll = [m.lat, m.lon];
+          bounds.push(ll);
+          var url = 'https://mapy.cz/zakladni?q=' + encodeURIComponent(m.obec) + '&x=' + m.lon + '&y=' + m.lat + '&z=12';
+          L.circleMarker(ll, {
+            radius: m.sidlo ? 9 : 7, weight: 2, color: '#fff',
+            fillColor: m.sidlo ? '#3b2a1e' : '#9a4c1a', fillOpacity: 1
+          }).addTo(map)
+            .bindTooltip(m.obec + (m.sidlo ? ' – sídlo firmy' : ''), { direction: 'top', offset: [0, -6] })
+            .bindPopup('<strong>' + m.obec + '</strong>' + (m.sidlo ? '<br>sídlo firmy' : '') +
+              '<br><a href="' + url + '" target="_blank" rel="noopener">Otevřít na Mapy.cz</a>');
+        });
+        // velikost mapy se ustálí až po zobrazení kontejneru
+        requestAnimationFrame(function () {
+          map.invalidateSize();
+          map.fitBounds(bounds, { padding: [20, 20], maxZoom: 9 });
+        });
+        // kolečkem myši přibližovat až po kliknutí do mapy (nebrání scrollování stránky)
+        map.once('focus click', function () { map.scrollWheelZoom.enable(); });
+      }).catch(function () {
+        mapBtn.disabled = false;
+        mapBtn.textContent = 'Mapu se nepodařilo načíst – zkusit znovu';
+      });
+    });
+  }
+
 })();
