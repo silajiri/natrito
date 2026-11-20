@@ -35,6 +35,7 @@
     var items = [], index = 0;
 
     var show = function (i) {
+      if (!items.length) return;
       index = (i + items.length) % items.length;
       var a = items[index];
       img.src = a.getAttribute('href');
@@ -50,8 +51,12 @@
       if (!a) return;
       e.preventDefault();
       items = Array.prototype.slice.call(document.querySelectorAll('a[data-lightbox="' + a.dataset.lightbox + '"]'));
+      // pořadí podle průběhu prací (data-i), ne podle pořadí v HTML
+      items.sort(function (x, y) { return (+x.dataset.i || 0) - (+y.dataset.i || 0); });
       box.classList.toggle('lightbox--single', items.length < 2);
-      show(items.indexOf(a));
+      // u renovací (před → po) začíná prohlížení titulní fotkou příběh od původního stavu
+      var story = a.classList.contains('project__link') && a.closest('.project--story');
+      show(story ? 0 : items.indexOf(a));
       box.showModal();
     });
 

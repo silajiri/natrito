@@ -1,106 +1,678 @@
 {
-  "_napoveda": "Seznam realizací pro galerii. Po úpravě spusťte: python tools/build.py  | id = název souborů (rok-měsíc-popis), title = nadpis karty, place = lokalita (nepovinné), desc = co se dělalo, photos = cesty k originálům (první je titulní). crop = [vlevo, nahoře, vpravo, dole] v procentech ořezu.",
+  "_napoveda": "Seznam realizací pro galerii. Po úpravě spusťte: python tools/build.py  | id = název souborů (rok-měsíc-popis), title = nadpis karty, place = lokalita (nepovinné), desc = co se dělalo, photos = cesty k originálům v pořadí, jak šly práce za sebou. Fotka může mít fázi: {\"src\": cesta, \"stage\": \"pred\" | \"behem\" | \"po\"} – titulní je první „po“, první „pred“ se ukáže v rohu karty. crop = {cesta: [vlevo, nahoře, vpravo, dole]} ořez v procentech.",
   "sections": {
     "realizace": [
-      { "id": "2024-09-srub-prirodni-odstin", "title": "Srub v přírodním odstínu", "place": "", "desc": "Venkovní nátěr srubu", "date": "2024-09",
-        "photos": ["assets/images/20240917_152353.jpg", "assets/images/20240917_152523.jpg"] },
-      { "id": "2024-04-srub-mahagon", "title": "Srub – tmavý mahagonový odstín", "place": "", "desc": "Venkovní nátěr srubu", "date": "2024-04",
-        "photos": ["assets/images/IMG-20240428-WA0003.jpg", "assets/images/IMG-20240428-WA0005.jpg", "assets/images/IMG-20240428-WA0006.jpg", "assets/images/IMG-20240428-WA0007.jpg"] },
-      { "id": "2024-04-srub-s-balkonem", "title": "Srub s balkonem a krytou terasou", "place": "", "desc": "Venkovní nátěr srubu", "date": "2024-04",
-        "photos": ["assets/images/20240402_113630.jpg", "assets/images/20240402_113613.jpg"] },
-      { "id": "2024-03-brouseni-srubu", "title": "Broušení srubu – průběh prací", "place": "", "desc": "Odstranění starého nátěru ručním broušením až na zdravé dřevo", "date": "2024-03",
-        "photos": ["assets/images/IMG-20240330-WA0005(1).jpg", "assets/images/IMG-20240330-WA0003.jpg", "assets/images/IMG-20240330-WA0004.jpg", "assets/images/IMG-20240331-WA0006(1).jpg", "assets/images/IMG-20240331-WA0010.jpg"] },
-      { "id": "2024-02-srub-orechovy-odstin", "title": "Srub v ořechovém odstínu", "place": "", "desc": "Venkovní nátěr srubu", "date": "2024-02",
-        "photos": ["assets/images/20240226_150827.jpg", "assets/images/20240226_150801.jpg", "assets/images/20240226_150816.jpg", "assets/images/20240226_150834.jpg"] },
-      { "id": "2023-08-cerveny-srub-balkon", "title": "Červený srub s balkonem", "place": "", "desc": "Krycí nátěr srubu", "date": "2023-08",
-        "photos": ["assets/images/20230803_143112.jpg"] },
-      { "id": "2023-08-cerveny-srub", "title": "Červený srub se žlutými dveřmi", "place": "", "desc": "Krycí nátěr srubu, okna a dveře", "date": "2023-08",
-        "photos": ["assets/images/20230803_082534_01.jpg"] },
-      { "id": "2023-07-srub-medovy-odstin", "title": "Srub v medovém odstínu", "place": "", "desc": "Venkovní nátěr srubu", "date": "2023-07",
-        "photos": ["assets/images/IMG-20230701-WA0009.jpg", "assets/images/IMG-20230701-WA0013.jpg"] },
-      { "id": "2023-05-drevostavba-tmava", "title": "Dřevostavba v tmavém odstínu", "place": "", "desc": "Nátěr dřevěné fasády", "date": "2023-05",
-        "photos": ["assets/images/IMG-20230530-WA0003.jpg"] },
-      { "id": "2023-03-srub-s-verandou", "title": "Srub s krytou verandou", "place": "", "desc": "Venkovní nátěr srubu", "date": "2023-03",
-        "photos": ["assets/images/20230309_105235.jpg"] },
-      { "id": "2022-10-cerveny-srub", "title": "Srub v červeném odstínu", "place": "", "desc": "Krycí nátěr srubu", "date": "2022-10",
-        "photos": ["assets/images/20221011_171643.jpg", "assets/images/20221011_171709.jpg"] },
-      { "id": "2022-05-renovace-roubenky", "title": "Renovace nátěru roubenky", "place": "", "desc": "Přebroušení zašedlého dřeva a nový nátěr", "date": "2022-05",
-        "photos": ["assets/images/IMG-20220506-WA0002.jpg", "assets/images/IMG-20220506-WA0003.jpg", "assets/images/IMG-20220424-WA0001.jpg"],
-        "crop": { "assets/images/IMG-20220424-WA0001.jpg": [0, 0, 0, 9] } },
-      { "id": "2021-06-srub-sedy-odstin", "title": "Srub v šedém odstínu", "place": "", "desc": "Venkovní nátěr srubu", "date": "2021-06",
-        "photos": ["assets/images/IMG_20210606_142043.jpg", "assets/images/IMG_20210606_141940.jpg"] },
-      { "id": "2021-06-srub-s-balkonem", "title": "Srub s balkonem", "place": "", "desc": "Venkovní nátěr srubu", "date": "2021-06",
-        "photos": ["assets/images/IMG_20210603_130407.jpg", "assets/images/IMG_20210603_130933.jpg"] }
+      {
+        "id": "2024-09-renovace-srubu-prirodni-odstin",
+        "title": "Renovace srubu – přírodní odstín",
+        "place": "",
+        "desc": "Původní ořechový nátěr jsme obrousili až na čisté dřevo a srub natřeli znovu v přírodním odstínu.",
+        "date": "2024-09",
+        "photos": [
+          {
+            "src": "assets/images/20240226_150801.jpg",
+            "stage": "pred"
+          },
+          {
+            "src": "assets/images/20240226_150827.jpg",
+            "stage": "pred"
+          },
+          {
+            "src": "assets/images/20240226_150816.jpg",
+            "stage": "pred"
+          },
+          {
+            "src": "assets/images/20240226_150834.jpg",
+            "stage": "pred"
+          },
+          {
+            "src": "assets/images/IMG-20240330-WA0003.jpg",
+            "stage": "behem"
+          },
+          {
+            "src": "assets/images/IMG-20240330-WA0004.jpg",
+            "stage": "behem"
+          },
+          {
+            "src": "assets/images/IMG-20240330-WA0005(1).jpg",
+            "stage": "behem"
+          },
+          {
+            "src": "assets/images/IMG-20240331-WA0006(1).jpg",
+            "stage": "behem"
+          },
+          {
+            "src": "assets/images/IMG-20240331-WA0010.jpg",
+            "stage": "behem"
+          },
+          {
+            "src": "assets/images/20240917_152353.jpg",
+            "stage": "po"
+          },
+          {
+            "src": "assets/images/20240917_152523.jpg",
+            "stage": "po"
+          }
+        ]
+      },
+      {
+        "id": "2024-04-renovace-srubu-mahagon",
+        "title": "Renovace srubu – mahagonový odstín",
+        "place": "",
+        "desc": "Obroušení starého nátěru a nový nátěr v tmavém mahagonovém odstínu.",
+        "date": "2024-04",
+        "photos": [
+          {
+            "src": "assets/images/20240402_113630.jpg",
+            "stage": "pred"
+          },
+          {
+            "src": "assets/images/20240402_113613.jpg",
+            "stage": "pred"
+          },
+          {
+            "src": "assets/images/IMG-20240428-WA0003.jpg",
+            "stage": "po"
+          },
+          {
+            "src": "assets/images/IMG-20240428-WA0005.jpg",
+            "stage": "po"
+          },
+          {
+            "src": "assets/images/IMG-20240428-WA0006.jpg",
+            "stage": "po"
+          },
+          {
+            "src": "assets/images/IMG-20240428-WA0007.jpg",
+            "stage": "po"
+          }
+        ]
+      },
+      {
+        "id": "2023-08-renovace-cerveneho-srubu",
+        "title": "Renovace červeného srubu",
+        "place": "",
+        "desc": "Obnova vybledlého krycího nátěru včetně oken a dveří.",
+        "date": "2023-08",
+        "photos": [
+          {
+            "src": "assets/images/20221011_171643.jpg",
+            "stage": "pred"
+          },
+          {
+            "src": "assets/images/20221011_171709.jpg",
+            "stage": "pred"
+          },
+          {
+            "src": "assets/images/20230803_082534_01.jpg",
+            "stage": "po"
+          },
+          {
+            "src": "assets/images/20230803_143112.jpg",
+            "stage": "po"
+          }
+        ]
+      },
+      {
+        "id": "2023-07-renovace-srubu-medovy-odstin",
+        "title": "Renovace srubu – medový odstín",
+        "place": "",
+        "desc": "Zašedlý srub s krytou verandou dostal nový nátěr v sytém medovém odstínu.",
+        "date": "2023-07",
+        "photos": [
+          {
+            "src": "assets/images/20230309_105235.jpg",
+            "stage": "pred"
+          },
+          {
+            "src": "assets/images/IMG-20230701-WA0009.jpg",
+            "stage": "po"
+          },
+          {
+            "src": "assets/images/IMG-20230701-WA0013.jpg",
+            "stage": "po"
+          }
+        ]
+      },
+      {
+        "id": "2023-05-nater-nove-drevostavby",
+        "title": "Nátěr nové dřevostavby",
+        "place": "",
+        "desc": "Nový dům natřený v tmavém odstínu – bez broušení, rovnou na nové dřevo.",
+        "date": "2023-05",
+        "photos": [
+          "assets/images/IMG-20230530-WA0003.jpg"
+        ]
+      },
+      {
+        "id": "2022-05-renovace-roubenky",
+        "title": "Renovace nátěru roubenky",
+        "place": "",
+        "desc": "Přebroušení zašedlého dřeva a nový nátěr",
+        "date": "2022-05",
+        "photos": [
+          "assets/images/IMG-20220506-WA0002.jpg",
+          "assets/images/IMG-20220506-WA0003.jpg",
+          "assets/images/IMG-20220424-WA0001.jpg"
+        ],
+        "crop": {
+          "assets/images/IMG-20220424-WA0001.jpg": [
+            0,
+            0,
+            0,
+            9
+          ]
+        }
+      },
+      {
+        "id": "2021-06-srub-sedy-odstin",
+        "title": "Srub v šedém odstínu",
+        "place": "",
+        "desc": "Venkovní nátěr srubu",
+        "date": "2021-06",
+        "photos": [
+          "assets/images/IMG_20210606_142043.jpg",
+          "assets/images/IMG_20210606_141940.jpg"
+        ]
+      },
+      {
+        "id": "2021-06-srub-s-balkonem",
+        "title": "Srub s balkonem",
+        "place": "",
+        "desc": "Venkovní nátěr srubu",
+        "date": "2021-06",
+        "photos": [
+          "assets/images/IMG_20210603_130407.jpg",
+          "assets/images/IMG_20210603_130933.jpg"
+        ]
+      }
     ],
     "archiv": [
-      { "id": "archiv-vysehori", "title": "Broušení a nátěr srubu", "place": "Vyšehoří", "desc": "Zašedlý srub přebroušený a znovu natřený",
-        "photos": ["assets/mess/vysehori-06.jpg", "assets/mess/vysehori-01.jpg", "assets/mess/vysehori-02.jpg", "assets/mess/vysehori-03.jpg", "assets/mess/vysehori-04.jpg", "assets/mess/vysehori-05.jpg"] },
-      { "id": "archiv-loucna-pod-klinovcem", "title": "Broušení a nátěr Remmers", "place": "Loučná pod Klínovcem", "desc": "Interiér: včelí vosk Kreidezeit",
-        "photos": ["assets/mess/Loučná pod Klínovcem 020.jpg", "assets/mess/Loučná pod Klínovcem 003.jpg", "assets/mess/Loučná pod Klínovcem 005.jpg", "assets/mess/Loučná pod Klínovcem 022.jpg"] },
-      { "id": "archiv-frydava", "title": "Broušení a nátěr Remmers", "place": "Frýdava", "desc": "Interiér: včelí vosk Kreidezeit",
-        "photos": ["assets/mess/Frýdava 010.jpg", "assets/mess/Frýdava 011.jpg", "assets/mess/Frýdava 013.jpg", "assets/mess/Frýdava 025.jpg"] },
-      { "id": "archiv-libcice-nad-vltavou", "title": "Broušení a nátěr Kreidezeit", "place": "Libčice nad Vltavou", "desc": "Interiér: včelí vosk Kreidezeit",
-        "photos": ["assets/mess/Libčice nad Vltavou 005.jpg", "assets/mess/Libčice nad Vltavou 006.jpg", "assets/mess/Libčice nad Vltavou 009.jpg"] },
-      { "id": "archiv-privlaky", "title": "Broušení a nátěr lazurou Kreidezeit", "place": "Přívlaky", "desc": "Interiér: včelí vosk Kreidezeit",
-        "photos": ["assets/mess/Přívlaky 001.jpg", "assets/mess/roubenky/Přívlaky 012.jpg", "assets/mess/roubenky/Přívlaky 013.jpg", "assets/mess/roubenky/Přívlaky 003.jpg", "assets/mess/roubenky/Přívlaky 004.jpg"] },
-      { "id": "archiv-bezdedice", "title": "Broušení a nátěr lazurou Kreidezeit", "place": "Bezdědice", "desc": "Interiér: včelí vosk Kreidezeit",
-        "photos": ["assets/mess/Bezdědice 001.jpg", "assets/mess/Bezdědice 004.jpg", "assets/mess/Bezdědice 006 vceli vosk.jpg", "assets/mess/Bezdědice 010 vceli vosk.jpg"] },
-      { "id": "archiv-zdobnice", "title": "Roubenka – nátěr včelím voskem", "place": "Zdobnice", "desc": "Interiér: včelí vosk Kreidezeit",
-        "photos": ["assets/mess/Zdobnice 2011 004.jpg", "assets/mess/Zdobnice 2011 015.jpg", "assets/mess/Zdobnice 2011 005.jpg", "assets/mess/Zdobnice 2011 006.jpg"] },
-      { "id": "archiv-ptice", "title": "Venkovní nátěr Delta", "place": "Ptice", "desc": "Interiér: včelí vosk Kreidezeit",
-        "photos": ["assets/mess/Ptice-1.jpg", "assets/mess/Ptice-2.jpg", "assets/mess/Ptice-3.jpg"] },
-      { "id": "archiv-cernic", "title": "Venkovní nátěr srubu", "place": "Černíč", "desc": "Interiér: včelí vosk Kreidezeit",
-        "photos": ["assets/mess/Černíč 006.jpg", "assets/mess/Černíč 003.jpg", "assets/mess/Černíč 007.jpg", "assets/mess/Černíč 008.jpg", "assets/mess/Černíč 009.jpg"] },
-      { "id": "archiv-kosice", "title": "Nátěr srubu Remmers", "place": "Kosice", "desc": "Venkovní nátěr",
-        "photos": ["assets/mess/Kosice 005.jpg", "assets/mess/Kosice 010.jpg"] },
-      { "id": "archiv-neratov", "title": "Venkovní nátěr Tikkurila", "place": "Neratov", "desc": "Roubenka",
-        "photos": ["assets/mess/Neratov 004.jpg", "assets/mess/Neratov 001.jpg"] },
-      { "id": "archiv-prostredni-becva", "title": "Vrchní nátěr Delta", "place": "Prostřední Bečva", "desc": "Roubenka",
-        "photos": ["assets/mess/Prostřední Bečva 007.jpg", "assets/mess/Prostřední Bečva 003.jpg", "assets/mess/prostřdní Bečva 008.jpg"] },
-      { "id": "archiv-dubicko", "title": "Venkovní nátěr Delta", "place": "Dubicko", "desc": "Dřevostavba",
-        "photos": ["assets/mess/Dubicko 002.jpg", "assets/mess/Dubicko 003.jpg"] },
-      { "id": "archiv-ktis", "title": "Venkovní nátěr Kreidezeit", "place": "Ktiš", "desc": "Interiér: včelí vosk Kreidezeit",
-        "photos": ["assets/mess/ktiš2.jpg", "assets/mess/ktiš.jpg", "assets/mess/Ktiš 013.jpg"] },
-      { "id": "archiv-zdimerice", "title": "Spárování a nátěr roubenky", "place": "Zdiměřice", "desc": "Spárování a venkovní nátěr",
-        "photos": ["assets/mess/zdimerice-nater a sparovani srubu.jpg", "assets/mess/zdiměřice - sparovani srubu.jpg"] },
-      { "id": "archiv-bojanovice", "title": "Nátěr Kreidezeit", "place": "Bojanovice", "desc": "Srub",
-        "photos": ["assets/mess/Bojanovice 008.jpg", "assets/mess/Bojanovice 007.jpg"] },
-      { "id": "archiv-jiretin", "title": "Nátěr Kreidezeit", "place": "Jiřetín", "desc": "Srub",
-        "photos": ["assets/mess/Jiřetín 005.jpg"] }
+      {
+        "id": "archiv-vysehori",
+        "title": "Broušení a nátěr srubu",
+        "place": "Vyšehoří",
+        "desc": "Zašedlý srub přebroušený a znovu natřený",
+        "photos": [
+          "assets/mess/vysehori-06.jpg",
+          "assets/mess/vysehori-01.jpg",
+          "assets/mess/vysehori-02.jpg",
+          "assets/mess/vysehori-03.jpg",
+          "assets/mess/vysehori-04.jpg",
+          "assets/mess/vysehori-05.jpg"
+        ]
+      },
+      {
+        "id": "archiv-loucna-pod-klinovcem",
+        "title": "Broušení a nátěr Remmers",
+        "place": "Loučná pod Klínovcem",
+        "desc": "Interiér: včelí vosk Kreidezeit",
+        "photos": [
+          "assets/mess/Loučná pod Klínovcem 020.jpg",
+          "assets/mess/Loučná pod Klínovcem 003.jpg",
+          "assets/mess/Loučná pod Klínovcem 005.jpg",
+          "assets/mess/Loučná pod Klínovcem 022.jpg"
+        ]
+      },
+      {
+        "id": "archiv-frydava",
+        "title": "Broušení a nátěr Remmers",
+        "place": "Frýdava",
+        "desc": "Interiér: včelí vosk Kreidezeit",
+        "photos": [
+          "assets/mess/Frýdava 010.jpg",
+          "assets/mess/Frýdava 011.jpg",
+          "assets/mess/Frýdava 013.jpg",
+          "assets/mess/Frýdava 025.jpg"
+        ]
+      },
+      {
+        "id": "archiv-libcice-nad-vltavou",
+        "title": "Broušení a nátěr Kreidezeit",
+        "place": "Libčice nad Vltavou",
+        "desc": "Interiér: včelí vosk Kreidezeit",
+        "photos": [
+          "assets/mess/Libčice nad Vltavou 005.jpg",
+          "assets/mess/Libčice nad Vltavou 006.jpg",
+          "assets/mess/Libčice nad Vltavou 009.jpg"
+        ]
+      },
+      {
+        "id": "archiv-privlaky",
+        "title": "Broušení a nátěr lazurou Kreidezeit",
+        "place": "Přívlaky",
+        "desc": "Interiér: včelí vosk Kreidezeit",
+        "photos": [
+          "assets/mess/Přívlaky 001.jpg",
+          "assets/mess/roubenky/Přívlaky 012.jpg",
+          "assets/mess/roubenky/Přívlaky 013.jpg",
+          "assets/mess/roubenky/Přívlaky 003.jpg",
+          "assets/mess/roubenky/Přívlaky 004.jpg"
+        ]
+      },
+      {
+        "id": "archiv-bezdedice",
+        "title": "Broušení a nátěr lazurou Kreidezeit",
+        "place": "Bezdědice",
+        "desc": "Interiér: včelí vosk Kreidezeit",
+        "photos": [
+          "assets/mess/Bezdědice 001.jpg",
+          "assets/mess/Bezdědice 004.jpg",
+          "assets/mess/Bezdědice 006 vceli vosk.jpg",
+          "assets/mess/Bezdědice 010 vceli vosk.jpg"
+        ]
+      },
+      {
+        "id": "archiv-zdobnice",
+        "title": "Roubenka – nátěr včelím voskem",
+        "place": "Zdobnice",
+        "desc": "Interiér: včelí vosk Kreidezeit",
+        "photos": [
+          "assets/mess/Zdobnice 2011 004.jpg",
+          "assets/mess/Zdobnice 2011 015.jpg",
+          "assets/mess/Zdobnice 2011 005.jpg",
+          "assets/mess/Zdobnice 2011 006.jpg"
+        ]
+      },
+      {
+        "id": "archiv-ptice",
+        "title": "Venkovní nátěr Delta",
+        "place": "Ptice",
+        "desc": "Interiér: včelí vosk Kreidezeit",
+        "photos": [
+          "assets/mess/Ptice-1.jpg",
+          "assets/mess/Ptice-2.jpg",
+          "assets/mess/Ptice-3.jpg"
+        ]
+      },
+      {
+        "id": "archiv-cernic",
+        "title": "Venkovní nátěr srubu",
+        "place": "Černíč",
+        "desc": "Interiér: včelí vosk Kreidezeit",
+        "photos": [
+          "assets/mess/Černíč 006.jpg",
+          "assets/mess/Černíč 003.jpg",
+          "assets/mess/Černíč 007.jpg",
+          "assets/mess/Černíč 008.jpg",
+          "assets/mess/Černíč 009.jpg"
+        ]
+      },
+      {
+        "id": "archiv-kosice",
+        "title": "Nátěr srubu Remmers",
+        "place": "Kosice",
+        "desc": "Venkovní nátěr",
+        "photos": [
+          "assets/mess/Kosice 005.jpg",
+          "assets/mess/Kosice 010.jpg"
+        ]
+      },
+      {
+        "id": "archiv-neratov",
+        "title": "Venkovní nátěr Tikkurila",
+        "place": "Neratov",
+        "desc": "Roubenka",
+        "photos": [
+          "assets/mess/Neratov 004.jpg",
+          "assets/mess/Neratov 001.jpg"
+        ]
+      },
+      {
+        "id": "archiv-prostredni-becva",
+        "title": "Vrchní nátěr Delta",
+        "place": "Prostřední Bečva",
+        "desc": "Roubenka",
+        "photos": [
+          "assets/mess/Prostřední Bečva 007.jpg",
+          "assets/mess/Prostřední Bečva 003.jpg",
+          "assets/mess/prostřdní Bečva 008.jpg"
+        ]
+      },
+      {
+        "id": "archiv-dubicko",
+        "title": "Venkovní nátěr Delta",
+        "place": "Dubicko",
+        "desc": "Dřevostavba",
+        "photos": [
+          "assets/mess/Dubicko 002.jpg",
+          "assets/mess/Dubicko 003.jpg"
+        ]
+      },
+      {
+        "id": "archiv-ktis",
+        "title": "Venkovní nátěr Kreidezeit",
+        "place": "Ktiš",
+        "desc": "Interiér: včelí vosk Kreidezeit",
+        "photos": [
+          "assets/mess/ktiš2.jpg",
+          "assets/mess/ktiš.jpg",
+          "assets/mess/Ktiš 013.jpg"
+        ]
+      },
+      {
+        "id": "archiv-zdimerice",
+        "title": "Spárování a nátěr roubenky",
+        "place": "Zdiměřice",
+        "desc": "Spárování a venkovní nátěr",
+        "photos": [
+          "assets/mess/zdimerice-nater a sparovani srubu.jpg"
+        ]
+      },
+      {
+        "id": "archiv-bojanovice",
+        "title": "Nátěr Kreidezeit",
+        "place": "Bojanovice",
+        "desc": "Srub",
+        "photos": [
+          "assets/mess/Bojanovice 008.jpg",
+          "assets/mess/Bojanovice 007.jpg"
+        ]
+      },
+      {
+        "id": "archiv-jiretin",
+        "title": "Nátěr Kreidezeit",
+        "place": "Jiřetín",
+        "desc": "Srub",
+        "photos": [
+          "assets/mess/Jiřetín 005.jpg"
+        ]
+      }
     ],
     "ostatni": [
-      { "id": "ostatni-kolowratsky-zamek", "title": "Malby interiérů", "place": "Kolowratský zámek, Rychnov nad Kněžnou", "desc": "",
-        "photos": ["assets/mess/malby Kolowrat 011.jpg", "assets/mess/malby Kolowrat 001.jpg", "assets/mess/malby Kolowrat 004.jpg", "assets/mess/malby Kolowrat 009.jpg", "assets/mess/malby Kolowrat 010.jpg"] },
-      { "id": "ostatni-zamek-kinskych", "title": "Zámek Kinských", "place": "Kostelec nad Orlicí", "desc": "",
-        "photos": ["assets/mess/zámek2.jpg"] },
-      { "id": "ostatni-fasada-hradec-kralove", "title": "Nátěr fasády", "place": "Hradec Králové", "desc": "",
-        "photos": ["assets/mess/Haniš 005.jpg", "assets/mess/Haniš 001.jpg", "assets/mess/Haniš 006.jpg"] },
-      { "id": "ostatni-fasada-dobruska", "title": "Nátěr fasády", "place": "Dobruška", "desc": "",
-        "photos": ["assets/mess/domasin.jpg"] },
-      { "id": "ostatni-klempirske-prvky", "title": "Nátěr klempířských prvků", "place": "Hradec Králové", "desc": "",
-        "photos": ["assets/mess/roudnicka.jpg"] },
-      { "id": "ostatni-hala-trebesov", "title": "Malba haly", "place": "Třebešov", "desc": "",
-        "photos": ["assets/mess/hala.jpg"] },
-      { "id": "ostatni-silo-zeas-trnov", "title": "Nátěr sila", "place": "ZEAS Trnov", "desc": "",
-        "photos": ["assets/mess/hospodarske/silo-zeas-trnov.jpg"] },
-      { "id": "ostatni-matrix", "title": "Nátěr proskleného vchodu", "place": "Matrix a.s.", "desc": "",
-        "photos": ["assets/mess/matrix.jpg"] },
-      { "id": "ostatni-zvu", "title": "Malba pracovny GŘ", "place": "ZVU Hradec Králové", "desc": "",
-        "photos": ["assets/mess/ZVU-1.jpg", "assets/mess/ZVU-2.jpg"] }
+      {
+        "id": "ostatni-kolowratsky-zamek",
+        "title": "Malby interiérů",
+        "place": "Kolowratský zámek, Rychnov nad Kněžnou",
+        "desc": "",
+        "photos": [
+          "assets/mess/malby Kolowrat 011.jpg",
+          "assets/mess/malby Kolowrat 001.jpg",
+          "assets/mess/malby Kolowrat 004.jpg",
+          "assets/mess/malby Kolowrat 009.jpg",
+          "assets/mess/malby Kolowrat 010.jpg"
+        ]
+      },
+      {
+        "id": "ostatni-zamek-kinskych",
+        "title": "Zámek Kinských",
+        "place": "Kostelec nad Orlicí",
+        "desc": "",
+        "photos": [
+          "assets/mess/zámek2.jpg"
+        ]
+      },
+      {
+        "id": "ostatni-fasada-hradec-kralove",
+        "title": "Nátěr fasády",
+        "place": "Hradec Králové",
+        "desc": "",
+        "photos": [
+          "assets/mess/Haniš 005.jpg",
+          "assets/mess/Haniš 001.jpg",
+          "assets/mess/Haniš 006.jpg"
+        ]
+      },
+      {
+        "id": "ostatni-fasada-dobruska",
+        "title": "Nátěr fasády",
+        "place": "Dobruška",
+        "desc": "",
+        "photos": [
+          "assets/mess/domasin.jpg"
+        ]
+      },
+      {
+        "id": "ostatni-klempirske-prvky",
+        "title": "Nátěr klempířských prvků",
+        "place": "Hradec Králové",
+        "desc": "",
+        "photos": [
+          "assets/mess/roudnicka.jpg"
+        ]
+      },
+      {
+        "id": "ostatni-malby-hal",
+        "title": "Malby provozních hal",
+        "place": "Třebešov, Kerson",
+        "desc": "",
+        "photos": [
+          "assets/mess/hala.jpg",
+          "assets/mess/watermark/hala-kerson.jpg"
+        ],
+        "crop": {
+          "assets/mess/watermark/hala-kerson.jpg": [
+            0,
+            0,
+            0,
+            13
+          ]
+        }
+      },
+      {
+        "id": "ostatni-zeas-trnov",
+        "title": "Nátěr sila a ocelové konstrukce",
+        "place": "ZEAS Trnov",
+        "desc": "",
+        "photos": [
+          "assets/mess/hospodarske/silo-zeas-trnov.jpg",
+          "assets/mess/watermark/nater-strecha-ZEAS.jpg"
+        ],
+        "crop": {
+          "assets/mess/watermark/nater-strecha-ZEAS.jpg": [
+            0,
+            0,
+            0,
+            13
+          ]
+        }
+      },
+      {
+        "id": "ostatni-cyklony-potstejn",
+        "title": "Nátěr cyklonů",
+        "place": "Zima Potštejn",
+        "desc": "",
+        "photos": [
+          "assets/mess/watermark/nater-cyklon-1.jpg",
+          "assets/mess/watermark/nater-cyklon-2.jpg",
+          "assets/mess/watermark/nater-cyklon-3.jpg"
+        ],
+        "crop": {
+          "assets/mess/watermark/nater-cyklon-1.jpg": [
+            0,
+            0,
+            0,
+            13
+          ],
+          "assets/mess/watermark/nater-cyklon-2.jpg": [
+            0,
+            0,
+            0,
+            13
+          ],
+          "assets/mess/watermark/nater-cyklon-3.jpg": [
+            0,
+            0,
+            0,
+            13
+          ]
+        }
+      },
+      {
+        "id": "ostatni-matrix",
+        "title": "Nátěr cyklonu, zásobníku a vstupu",
+        "place": "Matrix a.s.",
+        "desc": "",
+        "photos": [
+          "assets/mess/watermark/nater-cyklon-4.jpg",
+          "assets/mess/watermark/nater-zasobnik-matrix.jpg",
+          "assets/mess/matrix.jpg"
+        ],
+        "crop": {
+          "assets/mess/watermark/nater-cyklon-4.jpg": [
+            0,
+            0,
+            0,
+            13
+          ],
+          "assets/mess/watermark/nater-zasobnik-matrix.jpg": [
+            0,
+            0,
+            0,
+            13
+          ]
+        }
+      },
+      {
+        "id": "ostatni-zasobniky-dzv",
+        "title": "Nátěr zásobníků",
+        "place": "DŽV Rychnov nad Kněžnou",
+        "desc": "",
+        "photos": [
+          "assets/mess/watermark/nater-zasobnik-dzv.jpg"
+        ],
+        "crop": {
+          "assets/mess/watermark/nater-zasobnik-dzv.jpg": [
+            0,
+            0,
+            0,
+            13
+          ]
+        }
+      },
+      {
+        "id": "ostatni-dopravnik",
+        "title": "Nátěr dopravníku",
+        "place": "Agro Pelhřimov",
+        "desc": "",
+        "photos": [
+          "assets/mess/watermark/nater-dopravniku.jpg"
+        ],
+        "crop": {
+          "assets/mess/watermark/nater-dopravniku.jpg": [
+            0,
+            0,
+            0,
+            13
+          ]
+        }
+      },
+      {
+        "id": "ostatni-epoxidova-podlaha",
+        "title": "Epoxidový nátěr betonové podlahy",
+        "place": "Lípa nad Orlicí",
+        "desc": "",
+        "photos": [
+          "assets/mess/watermark/P8148652.jpg"
+        ],
+        "crop": {
+          "assets/mess/watermark/P8148652.jpg": [
+            0,
+            0,
+            0,
+            13
+          ]
+        }
+      },
+      {
+        "id": "ostatni-zvu",
+        "title": "Malba pracovny GŘ",
+        "place": "ZVU Hradec Králové",
+        "desc": "",
+        "photos": [
+          "assets/mess/ZVU-1.jpg",
+          "assets/mess/ZVU-2.jpg"
+        ]
+      }
     ]
   },
   "extra": [
-    { "src": "assets/images/IMG_20210603_130407.jpg", "out": "img/hero/srub-s-balkonem", "widths": [1200, 2000] },
-    { "src": "assets/images/20240917_152353.jpg", "out": "img/hero/srub-prirodni", "widths": [1200, 2000] },
-    { "src": "assets/images/20240226_150834.jpg", "out": "img/hero/detail-kulatin", "widths": [1200, 2000] },
-    { "src": "assets/images/IMG-20240330-WA0003.jpg", "out": "img/proces/pred-brousenim", "widths": [800] },
-    { "src": "assets/images/IMG-20240331-WA0006(1).jpg", "out": "img/proces/po-brouseni", "widths": [800] },
-    { "src": "assets/images/IMG-20240330-WA0005(1).jpg", "out": "img/proces/brouseni", "widths": [800] },
-    { "src": "assets/mess/zdiměřice - sparovani srubu.jpg", "out": "img/proces/sparovani", "widths": [800] },
-    { "src": "assets/mess/Zdobnice 2011 004.jpg", "out": "img/proces/vosk-interier", "widths": [800] },
-    { "src": "assets/images/IMG-20240428-WA0003.jpg", "out": "img/proces/hotovo", "widths": [800] },
-    { "src": "assets/mess/7655.jpg", "out": "img/clanky/drevostavba-roku-2013", "widths": [800] },
-    { "src": "assets/clanky/srub-cheb-privlaky.jpg", "out": "img/clanky/srub-cheb-privlaky", "widths": [800] },
-    { "src": "assets/clanky/kosice-009.jpg", "out": "img/clanky/kosice", "widths": [1000] }
+    {
+      "src": "assets/images/IMG_20210603_130407.jpg",
+      "out": "img/hero/srub-s-balkonem",
+      "widths": [
+        1200,
+        2000
+      ]
+    },
+    {
+      "src": "assets/images/20240917_152353.jpg",
+      "out": "img/hero/srub-prirodni",
+      "widths": [
+        1200,
+        2000
+      ]
+    },
+    {
+      "src": "assets/images/20240226_150834.jpg",
+      "out": "img/hero/detail-kulatin",
+      "widths": [
+        1200,
+        2000
+      ]
+    },
+    {
+      "src": "assets/mess/7655.jpg",
+      "out": "img/clanky/drevostavba-roku-2013",
+      "widths": [
+        800
+      ]
+    },
+    {
+      "src": "assets/clanky/srub-cheb-privlaky.jpg",
+      "out": "img/clanky/srub-cheb-privlaky",
+      "widths": [
+        800
+      ]
+    },
+    {
+      "src": "assets/clanky/kosice-009.jpg",
+      "out": "img/clanky/kosice",
+      "widths": [
+        1000
+      ]
+    },
+    {
+      "src": "assets/images/IMG-20240330-WA0005(1).jpg",
+      "out": "img/proces/brouseni",
+      "widths": [
+        800
+      ]
+    },
+    {
+      "src": "assets/mess/zdimerice-nater a sparovani srubu.jpg",
+      "out": "img/proces/sparovani",
+      "widths": [
+        800
+      ]
+    },
+    {
+      "src": "assets/images/IMG-20240428-WA0003.jpg",
+      "out": "img/proces/hotovo",
+      "widths": [
+        800
+      ]
+    },
+    {
+      "src": "assets/images/20240226_150801.jpg",
+      "out": "img/proces/pribeh-1-puvodni",
+      "widths": [
+        800
+      ]
+    },
+    {
+      "src": "assets/images/IMG-20240331-WA0006(1).jpg",
+      "out": "img/proces/pribeh-2-obrouseno",
+      "widths": [
+        800
+      ]
+    },
+    {
+      "src": "assets/images/20240917_152353.jpg",
+      "out": "img/proces/pribeh-3-hotovo",
+      "widths": [
+        800
+      ]
+    }
   ]
 }
