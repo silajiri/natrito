@@ -1,10 +1,20 @@
 {
- "_napoveda": "Obce, kde jsme pracovali – jen název obce a její střed, žádné konkrétní adresy. Po úpravě spusťte python tools/build.py. Souřadnice: OpenStreetMap (Nominatim). NIKDY sem nepřidávat Vyšehoří ani Zdiměřice.",
+ "_napoveda": "Obce, kde jsme pracovali – jen název obce a její střed, žádné konkrétní adresy. Po úpravě spusťte python tools/build.py. Souřadnice: OpenStreetMap (Nominatim). Před přidáním obce ověřte v interních poznámkách, že ji lze zveřejnit.",
  "mista": [
+  {
+   "obec": "Bezdědice (Bělá pod Bezdězem)",
+   "lat": 50.4863,
+   "lon": 14.7036
+  },
   {
    "obec": "Boží Dar",
    "lat": 50.4097,
    "lon": 12.9245
+  },
+  {
+   "obec": "Chrást (Kovářov)",
+   "lat": 49.5255,
+   "lon": 14.1991
   },
   {
    "obec": "Deštné v Orlických horách",
@@ -123,6 +133,11 @@
    "lon": 14.1663
   },
   {
+   "obec": "Přívlaky (Samopše)",
+   "lat": 49.8567,
+   "lon": 14.9275
+  },
+  {
    "obec": "Rychnov nad Kněžnou",
    "lat": 50.1633,
    "lon": 16.2748
@@ -161,6 +176,21 @@
    "obec": "Zdobnice",
    "lat": 50.2381,
    "lon": 16.4079
+  },
+  {
+   "obec": "Černá Hora",
+   "lat": 49.4135,
+   "lon": 16.5804
+  },
+  {
+   "obec": "Černíč",
+   "lat": 49.1278,
+   "lon": 15.4594
+  },
+  {
+   "obec": "Český Jiřetín",
+   "lat": 50.7073,
+   "lon": 13.5471
   }
  ]
 }
