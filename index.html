@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="cs" data-theme="a">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Broušení a nátěry srubů a roubenek | NatřiTo – Pavel Ehl</title>
+  <meta name="description" content="Ruční broušení a nátěry srubů, roubenek a dřevostaveb po celé ČR. Venkovní lazury, oleje, včelí vosk v interiéru, spárování. Malířské a natěračské práce od roku 1990 – Pavel Ehl, Dobruška.">
+  <link rel="canonical" href="https://www.natrito.cz/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:title" content="Broušení a nátěry srubů a roubenek | NatřiTo">
+  <meta property="og:description" content="Ruční broušení a nátěry srubů, roubenek a dřevostaveb po celé ČR. Od roku 1990.">
+  <meta property="og:image" content="https://www.natrito.cz/img/hero/srub-s-balkonem-1200.webp">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <meta name="theme-color" content="#3b2a1e">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme-a.css" id="theme-css">
+  <script>
+    /* PROTOTYP: přepínání návrhů vzhledu (?v=a|b|c). Ve finální verzi se odstraní. */
+    (function () {
+      var v = (new URLSearchParams(location.search).get('v') || '').toLowerCase();
+      try { if (!/^[abc]$/.test(v)) v = localStorage.getItem('natrito-theme') || 'a'; } catch (e) { v = v || 'a'; }
+      if (!/^[abc]$/.test(v)) v = 'a';
+      document.documentElement.dataset.theme = v;
+      document.getElementById('theme-css').href = 'css/theme-' + v + '.css';
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HousePainter",
+    "name": "NatřiTo – Pavel Ehl",
+    "description": "Broušení a nátěry srubů, roubenek a dřevostaveb, malířské a natěračské práce.",
+    "url": "https://www.natrito.cz/",
+    "telephone": "+420777149562",
+    "email": "natrito@seznam.cz",
+    "foundingDate": "1990",
+    "identifier": { "@type": "PropertyValue", "propertyID": "IČO", "value": "10501916" },
+    "founder": { "@type": "Person", "name": "Pavel Ehl" },
+    "address": { "@type": "PostalAddress", "streetAddress": "Domašín 95", "addressLocality": "Dobruška", "postalCode": "518 01", "addressCountry": "CZ" },
+    "areaServed": { "@type": "Country", "name": "Česká republika" },
+    "image": "https://www.natrito.cz/img/hero/srub-s-balkonem-1200.webp",
+    "logo": "https://www.natrito.cz/img/logo.svg"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="NatřiTo – úvod">
+        <img class="brand__logo" src="img/logo.svg" width="146" height="50" alt="EHL – malby, nátěry">
+        <span class="brand__text"><span class="brand__name">NatřiTo</span><span class="brand__tag">Pavel Ehl · nátěry dřevostaveb</span></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle__bar"></span><span class="visually-hidden">Menu</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Hlavní navigace">
+        <ul>
+          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#postup">Jak pracujeme</a></li>
+          <li><a href="#realizace">Realizace</a></li>
+          <li><a href="#clanky">Články</a></li>
+          <li><a href="#o-nas">O nás</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <a class="site-nav__phone" href="tel:+420777149562">777 149 562</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah">
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+      <div class="hero__media" role="img" aria-label="Srub s balkonem po novém nátěru"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Pavel Ehl · malířské a natěračské práce od roku 1990</p>
+          <h1 class="hero__title">Broušení a&nbsp;nátěry <span>srubů a&nbsp;roubenek</span></h1>
+          <span class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <p class="hero__lead">Vrátíme dřevu krásu a ochráníme ho na další roky. Brousíme ručně, natíráme štětcem a&nbsp;nátěrový systém volíme podle konkrétního domu – po celé České republice.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#kontakt">Nezávazná poptávka</a>
+            <a class="btn btn--ghost" href="#realizace">Prohlédnout realizace</a>
+          </div>
+        </div>
+        <ul class="hero__facts">
+          <li><strong>od 1990</strong><span>v oboru</span></li>
+          <li><strong>ručně</strong><span>broušení i&nbsp;nátěr</span></li>
+          <li><strong>celá ČR</strong><span>jezdíme za vámi</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== SLUŽBY ========== -->
+    <section class="section services" id="sluzby">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">Služby</p>
+          <h2 class="section__title">Kompletní péče o&nbsp;dřevěné domy</h2>
+          <p class="section__lead">Specializujeme se na sruby, roubenky a masivní dřevostavby – od renovace zašedlého dřeva po finální nátěr interiéru.</p>
+        </header>
+        <ul class="services__grid">
+          <li class="service">
+            <svg class="service__icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="20" width="26" height="14" rx="3"/><path d="M32 24h6a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4h-6"/><path d="M10 34v4M28 34v4M6 40h26"/><path d="M14 14l3-6M20 14l3-6M26 14l3-6"/></svg>
+            <h3 class="service__title">Broušení srubů a&nbsp;roubenek</h3>
+            <p>Zašedlé, popraskané nebo loupající se dřevo ručně přebrousíme až na zdravý povrch. Odstraníme starý nátěr i&nbsp;zašednutí a&nbsp;dřevo připravíme na nový nátěr.</p>
+          </li>
+          <li class="service">
+            <svg class="service__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 6h20v10H14z"/><path d="M24 16v6"/><path d="M18 22h12l-2 20h-8z"/><path d="M8 30c4-2 6 2 8 0"/></svg>
+            <h3 class="service__title">Venkovní nátěry</h3>
+            <p>Lazury, oleje i&nbsp;krycí barvy volíme podle druhu dřeva, orientace domu, přesahu střechy a&nbsp;nadmořské výšky. Nanášíme štětcem, aby nátěr dobře zakotvil.</p>
+          </li>
+          <li class="service">
+            <svg class="service__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6l14 8v16l-14 8-14-8V14z"/><path d="M24 22l14-8M24 22L10 14M24 22v16"/></svg>
+            <h3 class="service__title">Interiéry – včelí vosk a&nbsp;oleje</h3>
+            <p>Přírodní nátěry Kreidezeit ze směsi olejů a&nbsp;včelího vosku. Dřevo působí přirozeně, nepotlačí se jeho kresba ani barva a&nbsp;povrch se snadno udržuje.</p>
+          </li>
+          <li class="service">
+            <svg class="service__icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="9" rx="4.5"/><rect x="6" y="29" width="36" height="9" rx="4.5"/><path d="M8 24h32" stroke-dasharray="3 3"/></svg>
+            <h3 class="service__title">Spárování a&nbsp;tmelení</h3>
+            <p>Utěsníme spáry a&nbsp;praskliny mezi kládami pružným tmelem (Woodchink), aby do konstrukce nezatékalo a&nbsp;dům zůstal dlouho v&nbsp;dobré kondici.</p>
+          </li>
+        </ul>
+
+        <div class="services__more">
+          <div class="tip">
+            <h3 class="tip__title">Kdy obnovit venkovní nátěr?</h3>
+            <p>Na jižní a&nbsp;jihozápadní straně vydrží kvalitní venkovní nátěr zhruba čtyři roky, přírodní olejové nátěry asi polovinu této doby. Nejlepší je přetřít dům ve chvíli, kdy ještě vypadá pěkně – při delším odkladu dřevo černá a&nbsp;renovace je náročnější i&nbsp;dražší.</p>
+          </div>
+          <div class="other-services">
+            <h3 class="other-services__title">Další malířské a&nbsp;natěračské práce</h3>
+            <ul>
+              <li>nátěry fasád</li>
+              <li>nátěry oken a&nbsp;dveří</li>
+              <li>nátěry střech a&nbsp;ocelových konstrukcí</li>
+              <li>malby interiérů a&nbsp;provozních hal</li>
+              <li>nátěry sil, cyklonů a&nbsp;zásobníků</li>
+              <li>epoxidové nátěry betonových podlah</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== POSTUP ========== -->
+    <section class="section process" id="postup">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">Jak pracujeme</p>
+          <h2 class="section__title">Od prohlídky po hotový nátěr</h2>
+          <p class="section__lead">Každý dům je jiný. Proto nejdřív posoudíme stav dřeva a&nbsp;teprve pak navrhneme postup i&nbsp;materiál.</p>
+        </header>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3 class="step__title">Prohlídka a&nbsp;rozpočet</h3>
+            <p>Přijedeme, posoudíme dřevo, starý nátěr i&nbsp;okolí domu a&nbsp;navrhneme vhodný nátěrový systém. Dostanete přesný rozpočet.</p>
+          </li>
+          <li class="step">
+            <img class="step__img" src="img/proces/brouseni-800.webp" width="800" height="1067" alt="Ruční broušení kulatin srubu" loading="lazy">
+            <span class="step__num">2</span>
+            <h3 class="step__title">Broušení</h3>
+            <p>Starý nátěr a&nbsp;zašedlou vrstvu odstraníme ručním broušením. Na rozdíl od tryskání lze lépe opracovat i&nbsp;nerovnosti trámů.</p>
+          </li>
+          <li class="step">
+            <img class="step__img" src="img/proces/sparovani-800.webp" width="800" height="600" alt="Spárování roubenky" loading="lazy">
+            <span class="step__num">3</span>
+            <h3 class="step__title">Opravy a&nbsp;spárování</h3>
+            <p>Utěsníme praskliny a&nbsp;spáry, ošetříme poškozená místa a&nbsp;čela kulatin, aby nový nátěr měl pevný základ.</p>
+          </li>
+          <li class="step">
+            <img class="step__img" src="img/proces/hotovo-800.webp" width="800" height="1422" alt="Hotový nátěr srubu" loading="lazy">
+            <span class="step__num">4</span>
+            <h3 class="step__title">Nátěr</h3>
+            <p>Nátěr nanášíme ručně štětcem ve více vrstvách. Barva se lépe vetře do dřeva a&nbsp;přilne mnohem lépe než při pouhém nástřiku.</p>
+          </li>
+        </ol>
+
+        <figure class="before-after">
+          <div class="before-after__pair">
+            <div class="before-after__item"><img src="img/proces/pred-brousenim-800.webp" width="800" height="1067" alt="Štít srubu se starým tmavým nátěrem před broušením" loading="lazy"><span class="badge">Před</span></div>
+            <div class="before-after__item"><img src="img/proces/po-brouseni-800.webp" width="800" height="1422" alt="Stejný štít po přebroušení na čisté dřevo" loading="lazy"><span class="badge badge--after">Po přebroušení</span></div>
+          </div>
+          <figcaption>Srub před broušením a&nbsp;po něm – ze starého tmavého nátěru zpět na čisté dřevo, připravené na nový nátěr.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ========== REALIZACE ========== -->
+    <section class="section gallery" id="realizace">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">Reference</p>
+          <h2 class="section__title">Naše realizace</h2>
+          <p class="section__lead">Výběr z&nbsp;posledních let. Kliknutím na fotku otevřete celou sérii.</p>
+        </header>
+        <ul class="projects">
+<!-- gen:realizace -->
+<li class="project">
+  <a class="project__link" href="img/realizace/2024-09-srub-prirodni-odstin-01.webp" data-lightbox="2024-09-srub-prirodni-odstin" data-caption="Srub v přírodním odstínu – Venkovní nátěr srubu (1/2)">
+    <img src="img/realizace/2024-09-srub-prirodni-odstin-01-t.webp" width="720" height="540" alt="Srub v přírodním odstínu – Venkovní nátěr srubu" loading="lazy" decoding="async">
+    <span class="project__count">2 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Srub v přírodním odstínu</h3>
+    <p class="project__desc">Venkovní nátěr srubu</p>
+    <p class="project__place">září 2024</p>
+  </div>
+  <div hidden><a href="img/realizace/2024-09-srub-prirodni-odstin-02.webp" data-lightbox="2024-09-srub-prirodni-odstin" data-caption="Srub v přírodním odstínu – Venkovní nátěr srubu (2/2)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2024-04-srub-mahagon-01.webp" data-lightbox="2024-04-srub-mahagon" data-caption="Srub – tmavý mahagonový odstín – Venkovní nátěr srubu (1/4)">
+    <img src="img/realizace/2024-04-srub-mahagon-01-t.webp" width="720" height="1280" alt="Srub – tmavý mahagonový odstín – Venkovní nátěr srubu" loading="lazy" decoding="async">
+    <span class="project__count">4 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Srub – tmavý mahagonový odstín</h3>
+    <p class="project__desc">Venkovní nátěr srubu</p>
+    <p class="project__place">duben 2024</p>
+  </div>
+  <div hidden><a href="img/realizace/2024-04-srub-mahagon-02.webp" data-lightbox="2024-04-srub-mahagon" data-caption="Srub – tmavý mahagonový odstín – Venkovní nátěr srubu (2/4)"></a><a href="img/realizace/2024-04-srub-mahagon-03.webp" data-lightbox="2024-04-srub-mahagon" data-caption="Srub – tmavý mahagonový odstín – Venkovní nátěr srubu (3/4)"></a><a href="img/realizace/2024-04-srub-mahagon-04.webp" data-lightbox="2024-04-srub-mahagon" data-caption="Srub – tmavý mahagonový odstín – Venkovní nátěr srubu (4/4)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2024-04-srub-s-balkonem-01.webp" data-lightbox="2024-04-srub-s-balkonem" data-caption="Srub s balkonem a krytou terasou – Venkovní nátěr srubu (1/2)">
+    <img src="img/realizace/2024-04-srub-s-balkonem-01-t.webp" width="720" height="540" alt="Srub s balkonem a krytou terasou – Venkovní nátěr srubu" loading="lazy" decoding="async">
+    <span class="project__count">2 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Srub s balkonem a krytou terasou</h3>
+    <p class="project__desc">Venkovní nátěr srubu</p>
+    <p class="project__place">duben 2024</p>
+  </div>
+  <div hidden><a href="img/realizace/2024-04-srub-s-balkonem-02.webp" data-lightbox="2024-04-srub-s-balkonem" data-caption="Srub s balkonem a krytou terasou – Venkovní nátěr srubu (2/2)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2024-03-brouseni-srubu-01.webp" data-lightbox="2024-03-brouseni-srubu" data-caption="Broušení srubu – průběh prací – Odstranění starého nátěru ručním broušením až na zdravé dřevo (1/5)">
+    <img src="img/realizace/2024-03-brouseni-srubu-01-t.webp" width="720" height="960" alt="Broušení srubu – průběh prací – Odstranění starého nátěru ručním broušením až na zdravé dřevo" loading="lazy" decoding="async">
+    <span class="project__count">5 fotek</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Broušení srubu – průběh prací</h3>
+    <p class="project__desc">Odstranění starého nátěru ručním broušením až na zdravé dřevo</p>
+    <p class="project__place">březen 2024</p>
+  </div>
+  <div hidden><a href="img/realizace/2024-03-brouseni-srubu-02.webp" data-lightbox="2024-03-brouseni-srubu" data-caption="Broušení srubu – průběh prací – Odstranění starého nátěru ručním broušením až na zdravé dřevo (2/5)"></a><a href="img/realizace/2024-03-brouseni-srubu-03.webp" data-lightbox="2024-03-brouseni-srubu" data-caption="Broušení srubu – průběh prací – Odstranění starého nátěru ručním broušením až na zdravé dřevo (3/5)"></a><a href="img/realizace/2024-03-brouseni-srubu-04.webp" data-lightbox="2024-03-brouseni-srubu" data-caption="Broušení srubu – průběh prací – Odstranění starého nátěru ručním broušením až na zdravé dřevo (4/5)"></a><a href="img/realizace/2024-03-brouseni-srubu-05.webp" data-lightbox="2024-03-brouseni-srubu" data-caption="Broušení srubu – průběh prací – Odstranění starého nátěru ručním broušením až na zdravé dřevo (5/5)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2024-02-srub-orechovy-odstin-01.webp" data-lightbox="2024-02-srub-orechovy-odstin" data-caption="Srub v ořechovém odstínu – Venkovní nátěr srubu (1/4)">
+    <img src="img/realizace/2024-02-srub-orechovy-odstin-01-t.webp" width="720" height="540" alt="Srub v ořechovém odstínu – Venkovní nátěr srubu" loading="lazy" decoding="async">
+    <span class="project__count">4 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Srub v ořechovém odstínu</h3>
+    <p class="project__desc">Venkovní nátěr srubu</p>
+    <p class="project__place">únor 2024</p>
+  </div>
+  <div hidden><a href="img/realizace/2024-02-srub-orechovy-odstin-02.webp" data-lightbox="2024-02-srub-orechovy-odstin" data-caption="Srub v ořechovém odstínu – Venkovní nátěr srubu (2/4)"></a><a href="img/realizace/2024-02-srub-orechovy-odstin-03.webp" data-lightbox="2024-02-srub-orechovy-odstin" data-caption="Srub v ořechovém odstínu – Venkovní nátěr srubu (3/4)"></a><a href="img/realizace/2024-02-srub-orechovy-odstin-04.webp" data-lightbox="2024-02-srub-orechovy-odstin" data-caption="Srub v ořechovém odstínu – Venkovní nátěr srubu (4/4)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2023-08-cerveny-srub-balkon-01.webp" data-lightbox="2023-08-cerveny-srub-balkon" data-caption="Červený srub s balkonem – Krycí nátěr srubu">
+    <img src="img/realizace/2023-08-cerveny-srub-balkon-01-t.webp" width="720" height="540" alt="Červený srub s balkonem – Krycí nátěr srubu" loading="lazy" decoding="async">
+    <span class="project__count">1 fotka</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Červený srub s balkonem</h3>
+    <p class="project__desc">Krycí nátěr srubu</p>
+    <p class="project__place">srpen 2023</p>
+  </div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2023-08-cerveny-srub-01.webp" data-lightbox="2023-08-cerveny-srub" data-caption="Červený srub se žlutými dveřmi – Krycí nátěr srubu, okna a dveře">
+    <img src="img/realizace/2023-08-cerveny-srub-01-t.webp" width="720" height="540" alt="Červený srub se žlutými dveřmi – Krycí nátěr srubu, okna a dveře" loading="lazy" decoding="async">
+    <span class="project__count">1 fotka</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Červený srub se žlutými dveřmi</h3>
+    <p class="project__desc">Krycí nátěr srubu, okna a dveře</p>
+    <p class="project__place">srpen 2023</p>
+  </div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2023-07-srub-medovy-odstin-01.webp" data-lightbox="2023-07-srub-medovy-odstin" data-caption="Srub v medovém odstínu – Venkovní nátěr srubu (1/2)">
+    <img src="img/realizace/2023-07-srub-medovy-odstin-01-t.webp" width="720" height="960" alt="Srub v medovém odstínu – Venkovní nátěr srubu" loading="lazy" decoding="async">
+    <span class="project__count">2 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Srub v medovém odstínu</h3>
+    <p class="project__desc">Venkovní nátěr srubu</p>
+    <p class="project__place">červenec 2023</p>
+  </div>
+  <div hidden><a href="img/realizace/2023-07-srub-medovy-odstin-02.webp" data-lightbox="2023-07-srub-medovy-odstin" data-caption="Srub v medovém odstínu – Venkovní nátěr srubu (2/2)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2023-05-drevostavba-tmava-01.webp" data-lightbox="2023-05-drevostavba-tmava" data-caption="Dřevostavba v tmavém odstínu – Nátěr dřevěné fasády">
+    <img src="img/realizace/2023-05-drevostavba-tmava-01-t.webp" width="720" height="540" alt="Dřevostavba v tmavém odstínu – Nátěr dřevěné fasády" loading="lazy" decoding="async">
+    <span class="project__count">1 fotka</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Dřevostavba v tmavém odstínu</h3>
+    <p class="project__desc">Nátěr dřevěné fasády</p>
+    <p class="project__place">květen 2023</p>
+  </div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2023-03-srub-s-verandou-01.webp" data-lightbox="2023-03-srub-s-verandou" data-caption="Srub s krytou verandou – Venkovní nátěr srubu">
+    <img src="img/realizace/2023-03-srub-s-verandou-01-t.webp" width="720" height="540" alt="Srub s krytou verandou – Venkovní nátěr srubu" loading="lazy" decoding="async">
+    <span class="project__count">1 fotka</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Srub s krytou verandou</h3>
+    <p class="project__desc">Venkovní nátěr srubu</p>
+    <p class="project__place">březen 2023</p>
+  </div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2022-10-cerveny-srub-01.webp" data-lightbox="2022-10-cerveny-srub" data-caption="Srub v červeném odstínu – Krycí nátěr srubu (1/2)">
+    <img src="img/realizace/2022-10-cerveny-srub-01-t.webp" width="720" height="540" alt="Srub v červeném odstínu – Krycí nátěr srubu" loading="lazy" decoding="async">
+    <span class="project__count">2 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Srub v červeném odstínu</h3>
+    <p class="project__desc">Krycí nátěr srubu</p>
+    <p class="project__place">říjen 2022</p>
+  </div>
+  <div hidden><a href="img/realizace/2022-10-cerveny-srub-02.webp" data-lightbox="2022-10-cerveny-srub" data-caption="Srub v červeném odstínu – Krycí nátěr srubu (2/2)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2022-05-renovace-roubenky-01.webp" data-lightbox="2022-05-renovace-roubenky" data-caption="Renovace nátěru roubenky – Přebroušení zašedlého dřeva a nový nátěr (1/3)">
+    <img src="img/realizace/2022-05-renovace-roubenky-01-t.webp" width="720" height="540" alt="Renovace nátěru roubenky – Přebroušení zašedlého dřeva a nový nátěr" loading="lazy" decoding="async">
+    <span class="project__count">3 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Renovace nátěru roubenky</h3>
+    <p class="project__desc">Přebroušení zašedlého dřeva a nový nátěr</p>
+    <p class="project__place">květen 2022</p>
+  </div>
+  <div hidden><a href="img/realizace/2022-05-renovace-roubenky-02.webp" data-lightbox="2022-05-renovace-roubenky" data-caption="Renovace nátěru roubenky – Přebroušení zašedlého dřeva a nový nátěr (2/3)"></a><a href="img/realizace/2022-05-renovace-roubenky-03.webp" data-lightbox="2022-05-renovace-roubenky" data-caption="Renovace nátěru roubenky – Přebroušení zašedlého dřeva a nový nátěr (3/3)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2021-06-srub-sedy-odstin-01.webp" data-lightbox="2021-06-srub-sedy-odstin" data-caption="Srub v šedém odstínu – Venkovní nátěr srubu (1/2)">
+    <img src="img/realizace/2021-06-srub-sedy-odstin-01-t.webp" width="720" height="540" alt="Srub v šedém odstínu – Venkovní nátěr srubu" loading="lazy" decoding="async">
+    <span class="project__count">2 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Srub v šedém odstínu</h3>
+    <p class="project__desc">Venkovní nátěr srubu</p>
+    <p class="project__place">červen 2021</p>
+  </div>
+  <div hidden><a href="img/realizace/2021-06-srub-sedy-odstin-02.webp" data-lightbox="2021-06-srub-sedy-odstin" data-caption="Srub v šedém odstínu – Venkovní nátěr srubu (2/2)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/2021-06-srub-s-balkonem-01.webp" data-lightbox="2021-06-srub-s-balkonem" data-caption="Srub s balkonem – Venkovní nátěr srubu (1/2)">
+    <img src="img/realizace/2021-06-srub-s-balkonem-01-t.webp" width="720" height="540" alt="Srub s balkonem – Venkovní nátěr srubu" loading="lazy" decoding="async">
+    <span class="project__count">2 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Srub s balkonem</h3>
+    <p class="project__desc">Venkovní nátěr srubu</p>
+    <p class="project__place">červen 2021</p>
+  </div>
+  <div hidden><a href="img/realizace/2021-06-srub-s-balkonem-02.webp" data-lightbox="2021-06-srub-s-balkonem" data-caption="Srub s balkonem – Venkovní nátěr srubu (2/2)"></a></div>
+</li>
+<!-- /gen:realizace -->
+        </ul>
+
+        <details class="more" open>
+          <summary class="more__summary"><span>Starší realizace srubů a roubenek</span></summary>
+          <ul class="projects projects--compact">
+<!-- gen:archiv -->
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-vysehori-01.webp" data-lightbox="archiv-vysehori" data-caption="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený (1/6)">
+    <img src="img/realizace/archiv-vysehori-01-t.webp" width="720" height="540" alt="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený" loading="lazy" decoding="async">
+    <span class="project__count">6 fotek</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Vyšehoří</h3>
+    <p class="project__desc">Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-vysehori-02.webp" data-lightbox="archiv-vysehori" data-caption="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený (2/6)"></a><a href="img/realizace/archiv-vysehori-03.webp" data-lightbox="archiv-vysehori" data-caption="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený (3/6)"></a><a href="img/realizace/archiv-vysehori-04.webp" data-lightbox="archiv-vysehori" data-caption="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený (4/6)"></a><a href="img/realizace/archiv-vysehori-05.webp" data-lightbox="archiv-vysehori" data-caption="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený (5/6)"></a><a href="img/realizace/archiv-vysehori-06.webp" data-lightbox="archiv-vysehori" data-caption="Vyšehoří – Broušení a nátěr srubu · Zašedlý srub přebroušený a znovu natřený (6/6)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-loucna-pod-klinovcem-01.webp" data-lightbox="archiv-loucna-pod-klinovcem" data-caption="Loučná pod Klínovcem – Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit (1/4)">
+    <img src="img/realizace/archiv-loucna-pod-klinovcem-01-t.webp" width="720" height="540" alt="Loučná pod Klínovcem – Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit" loading="lazy" decoding="async">
+    <span class="project__count">4 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Loučná pod Klínovcem</h3>
+    <p class="project__desc">Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-loucna-pod-klinovcem-02.webp" data-lightbox="archiv-loucna-pod-klinovcem" data-caption="Loučná pod Klínovcem – Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit (2/4)"></a><a href="img/realizace/archiv-loucna-pod-klinovcem-03.webp" data-lightbox="archiv-loucna-pod-klinovcem" data-caption="Loučná pod Klínovcem – Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit (3/4)"></a><a href="img/realizace/archiv-loucna-pod-klinovcem-04.webp" data-lightbox="archiv-loucna-pod-klinovcem" data-caption="Loučná pod Klínovcem – Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit (4/4)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-frydava-01.webp" data-lightbox="archiv-frydava" data-caption="Frýdava – Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit (1/4)">
+    <img src="img/realizace/archiv-frydava-01-t.webp" width="720" height="540" alt="Frýdava – Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit" loading="lazy" decoding="async">
+    <span class="project__count">4 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Frýdava</h3>
+    <p class="project__desc">Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-frydava-02.webp" data-lightbox="archiv-frydava" data-caption="Frýdava – Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit (2/4)"></a><a href="img/realizace/archiv-frydava-03.webp" data-lightbox="archiv-frydava" data-caption="Frýdava – Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit (3/4)"></a><a href="img/realizace/archiv-frydava-04.webp" data-lightbox="archiv-frydava" data-caption="Frýdava – Broušení a nátěr Remmers · Interiér: včelí vosk Kreidezeit (4/4)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-libcice-nad-vltavou-01.webp" data-lightbox="archiv-libcice-nad-vltavou" data-caption="Libčice nad Vltavou – Broušení a nátěr Kreidezeit · Interiér: včelí vosk Kreidezeit (1/3)">
+    <img src="img/realizace/archiv-libcice-nad-vltavou-01-t.webp" width="720" height="540" alt="Libčice nad Vltavou – Broušení a nátěr Kreidezeit · Interiér: včelí vosk Kreidezeit" loading="lazy" decoding="async">
+    <span class="project__count">3 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Libčice nad Vltavou</h3>
+    <p class="project__desc">Broušení a nátěr Kreidezeit · Interiér: včelí vosk Kreidezeit</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-libcice-nad-vltavou-02.webp" data-lightbox="archiv-libcice-nad-vltavou" data-caption="Libčice nad Vltavou – Broušení a nátěr Kreidezeit · Interiér: včelí vosk Kreidezeit (2/3)"></a><a href="img/realizace/archiv-libcice-nad-vltavou-03.webp" data-lightbox="archiv-libcice-nad-vltavou" data-caption="Libčice nad Vltavou – Broušení a nátěr Kreidezeit · Interiér: včelí vosk Kreidezeit (3/3)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-privlaky-01.webp" data-lightbox="archiv-privlaky" data-caption="Přívlaky – Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit (1/5)">
+    <img src="img/realizace/archiv-privlaky-01-t.webp" width="720" height="540" alt="Přívlaky – Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit" loading="lazy" decoding="async">
+    <span class="project__count">5 fotek</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Přívlaky</h3>
+    <p class="project__desc">Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-privlaky-02.webp" data-lightbox="archiv-privlaky" data-caption="Přívlaky – Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit (2/5)"></a><a href="img/realizace/archiv-privlaky-03.webp" data-lightbox="archiv-privlaky" data-caption="Přívlaky – Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit (3/5)"></a><a href="img/realizace/archiv-privlaky-04.webp" data-lightbox="archiv-privlaky" data-caption="Přívlaky – Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit (4/5)"></a><a href="img/realizace/archiv-privlaky-05.webp" data-lightbox="archiv-privlaky" data-caption="Přívlaky – Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit (5/5)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-bezdedice-01.webp" data-lightbox="archiv-bezdedice" data-caption="Bezdědice – Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit (1/4)">
+    <img src="img/realizace/archiv-bezdedice-01-t.webp" width="720" height="540" alt="Bezdědice – Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit" loading="lazy" decoding="async">
+    <span class="project__count">4 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Bezdědice</h3>
+    <p class="project__desc">Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-bezdedice-02.webp" data-lightbox="archiv-bezdedice" data-caption="Bezdědice – Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit (2/4)"></a><a href="img/realizace/archiv-bezdedice-03.webp" data-lightbox="archiv-bezdedice" data-caption="Bezdědice – Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit (3/4)"></a><a href="img/realizace/archiv-bezdedice-04.webp" data-lightbox="archiv-bezdedice" data-caption="Bezdědice – Broušení a nátěr lazurou Kreidezeit · Interiér: včelí vosk Kreidezeit (4/4)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-zdobnice-01.webp" data-lightbox="archiv-zdobnice" data-caption="Zdobnice – Roubenka – nátěr včelím voskem · Interiér: včelí vosk Kreidezeit (1/4)">
+    <img src="img/realizace/archiv-zdobnice-01-t.webp" width="720" height="540" alt="Zdobnice – Roubenka – nátěr včelím voskem · Interiér: včelí vosk Kreidezeit" loading="lazy" decoding="async">
+    <span class="project__count">4 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Zdobnice</h3>
+    <p class="project__desc">Roubenka – nátěr včelím voskem · Interiér: včelí vosk Kreidezeit</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-zdobnice-02.webp" data-lightbox="archiv-zdobnice" data-caption="Zdobnice – Roubenka – nátěr včelím voskem · Interiér: včelí vosk Kreidezeit (2/4)"></a><a href="img/realizace/archiv-zdobnice-03.webp" data-lightbox="archiv-zdobnice" data-caption="Zdobnice – Roubenka – nátěr včelím voskem · Interiér: včelí vosk Kreidezeit (3/4)"></a><a href="img/realizace/archiv-zdobnice-04.webp" data-lightbox="archiv-zdobnice" data-caption="Zdobnice – Roubenka – nátěr včelím voskem · Interiér: včelí vosk Kreidezeit (4/4)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-ptice-01.webp" data-lightbox="archiv-ptice" data-caption="Ptice – Venkovní nátěr Delta · Interiér: včelí vosk Kreidezeit (1/3)">
+    <img src="img/realizace/archiv-ptice-01-t.webp" width="720" height="540" alt="Ptice – Venkovní nátěr Delta · Interiér: včelí vosk Kreidezeit" loading="lazy" decoding="async">
+    <span class="project__count">3 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Ptice</h3>
+    <p class="project__desc">Venkovní nátěr Delta · Interiér: včelí vosk Kreidezeit</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-ptice-02.webp" data-lightbox="archiv-ptice" data-caption="Ptice – Venkovní nátěr Delta · Interiér: včelí vosk Kreidezeit (2/3)"></a><a href="img/realizace/archiv-ptice-03.webp" data-lightbox="archiv-ptice" data-caption="Ptice – Venkovní nátěr Delta · Interiér: včelí vosk Kreidezeit (3/3)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-cernic-01.webp" data-lightbox="archiv-cernic" data-caption="Černíč – Venkovní nátěr srubu · Interiér: včelí vosk Kreidezeit (1/5)">
+    <img src="img/realizace/archiv-cernic-01-t.webp" width="720" height="540" alt="Černíč – Venkovní nátěr srubu · Interiér: včelí vosk Kreidezeit" loading="lazy" decoding="async">
+    <span class="project__count">5 fotek</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Černíč</h3>
+    <p class="project__desc">Venkovní nátěr srubu · Interiér: včelí vosk Kreidezeit</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-cernic-02.webp" data-lightbox="archiv-cernic" data-caption="Černíč – Venkovní nátěr srubu · Interiér: včelí vosk Kreidezeit (2/5)"></a><a href="img/realizace/archiv-cernic-03.webp" data-lightbox="archiv-cernic" data-caption="Černíč – Venkovní nátěr srubu · Interiér: včelí vosk Kreidezeit (3/5)"></a><a href="img/realizace/archiv-cernic-04.webp" data-lightbox="archiv-cernic" data-caption="Černíč – Venkovní nátěr srubu · Interiér: včelí vosk Kreidezeit (4/5)"></a><a href="img/realizace/archiv-cernic-05.webp" data-lightbox="archiv-cernic" data-caption="Černíč – Venkovní nátěr srubu · Interiér: včelí vosk Kreidezeit (5/5)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-kosice-01.webp" data-lightbox="archiv-kosice" data-caption="Kosice – Nátěr srubu Remmers · Venkovní nátěr (1/2)">
+    <img src="img/realizace/archiv-kosice-01-t.webp" width="720" height="540" alt="Kosice – Nátěr srubu Remmers · Venkovní nátěr" loading="lazy" decoding="async">
+    <span class="project__count">2 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Kosice</h3>
+    <p class="project__desc">Nátěr srubu Remmers · Venkovní nátěr</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-kosice-02.webp" data-lightbox="archiv-kosice" data-caption="Kosice – Nátěr srubu Remmers · Venkovní nátěr (2/2)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-neratov-01.webp" data-lightbox="archiv-neratov" data-caption="Neratov – Venkovní nátěr Tikkurila · Roubenka (1/2)">
+    <img src="img/realizace/archiv-neratov-01-t.webp" width="720" height="540" alt="Neratov – Venkovní nátěr Tikkurila · Roubenka" loading="lazy" decoding="async">
+    <span class="project__count">2 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Neratov</h3>
+    <p class="project__desc">Venkovní nátěr Tikkurila · Roubenka</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-neratov-02.webp" data-lightbox="archiv-neratov" data-caption="Neratov – Venkovní nátěr Tikkurila · Roubenka (2/2)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-prostredni-becva-01.webp" data-lightbox="archiv-prostredni-becva" data-caption="Prostřední Bečva – Vrchní nátěr Delta · Roubenka (1/3)">
+    <img src="img/realizace/archiv-prostredni-becva-01-t.webp" width="720" height="540" alt="Prostřední Bečva – Vrchní nátěr Delta · Roubenka" loading="lazy" decoding="async">
+    <span class="project__count">3 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Prostřední Bečva</h3>
+    <p class="project__desc">Vrchní nátěr Delta · Roubenka</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-prostredni-becva-02.webp" data-lightbox="archiv-prostredni-becva" data-caption="Prostřední Bečva – Vrchní nátěr Delta · Roubenka (2/3)"></a><a href="img/realizace/archiv-prostredni-becva-03.webp" data-lightbox="archiv-prostredni-becva" data-caption="Prostřední Bečva – Vrchní nátěr Delta · Roubenka (3/3)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-dubicko-01.webp" data-lightbox="archiv-dubicko" data-caption="Dubicko – Venkovní nátěr Delta · Dřevostavba (1/2)">
+    <img src="img/realizace/archiv-dubicko-01-t.webp" width="720" height="540" alt="Dubicko – Venkovní nátěr Delta · Dřevostavba" loading="lazy" decoding="async">
+    <span class="project__count">2 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Dubicko</h3>
+    <p class="project__desc">Venkovní nátěr Delta · Dřevostavba</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-dubicko-02.webp" data-lightbox="archiv-dubicko" data-caption="Dubicko – Venkovní nátěr Delta · Dřevostavba (2/2)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-ktis-01.webp" data-lightbox="archiv-ktis" data-caption="Ktiš – Venkovní nátěr Kreidezeit · Interiér: včelí vosk Kreidezeit (1/3)">
+    <img src="img/realizace/archiv-ktis-01-t.webp" width="720" height="540" alt="Ktiš – Venkovní nátěr Kreidezeit · Interiér: včelí vosk Kreidezeit" loading="lazy" decoding="async">
+    <span class="project__count">3 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Ktiš</h3>
+    <p class="project__desc">Venkovní nátěr Kreidezeit · Interiér: včelí vosk Kreidezeit</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-ktis-02.webp" data-lightbox="archiv-ktis" data-caption="Ktiš – Venkovní nátěr Kreidezeit · Interiér: včelí vosk Kreidezeit (2/3)"></a><a href="img/realizace/archiv-ktis-03.webp" data-lightbox="archiv-ktis" data-caption="Ktiš – Venkovní nátěr Kreidezeit · Interiér: včelí vosk Kreidezeit (3/3)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-zdimerice-01.webp" data-lightbox="archiv-zdimerice" data-caption="Zdiměřice – Spárování a nátěr roubenky · Spárování a venkovní nátěr (1/2)">
+    <img src="img/realizace/archiv-zdimerice-01-t.webp" width="720" height="540" alt="Zdiměřice – Spárování a nátěr roubenky · Spárování a venkovní nátěr" loading="lazy" decoding="async">
+    <span class="project__count">2 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Zdiměřice</h3>
+    <p class="project__desc">Spárování a nátěr roubenky · Spárování a venkovní nátěr</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-zdimerice-02.webp" data-lightbox="archiv-zdimerice" data-caption="Zdiměřice – Spárování a nátěr roubenky · Spárování a venkovní nátěr (2/2)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-bojanovice-01.webp" data-lightbox="archiv-bojanovice" data-caption="Bojanovice – Nátěr Kreidezeit · Srub (1/2)">
+    <img src="img/realizace/archiv-bojanovice-01-t.webp" width="720" height="960" alt="Bojanovice – Nátěr Kreidezeit · Srub" loading="lazy" decoding="async">
+    <span class="project__count">2 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Bojanovice</h3>
+    <p class="project__desc">Nátěr Kreidezeit · Srub</p>
+  </div>
+  <div hidden><a href="img/realizace/archiv-bojanovice-02.webp" data-lightbox="archiv-bojanovice" data-caption="Bojanovice – Nátěr Kreidezeit · Srub (2/2)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/archiv-jiretin-01.webp" data-lightbox="archiv-jiretin" data-caption="Jiřetín – Nátěr Kreidezeit · Srub">
+    <img src="img/realizace/archiv-jiretin-01-t.webp" width="720" height="960" alt="Jiřetín – Nátěr Kreidezeit · Srub" loading="lazy" decoding="async">
+    <span class="project__count">1 fotka</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Jiřetín</h3>
+    <p class="project__desc">Nátěr Kreidezeit · Srub</p>
+  </div>
+</li>
+<!-- /gen:archiv -->
+          </ul>
+        </details>
+
+        <details class="more">
+          <summary class="more__summary"><span>Fasády, interiéry a průmyslové stavby</span></summary>
+          <ul class="projects projects--compact">
+<!-- gen:ostatni -->
+<li class="project">
+  <a class="project__link" href="img/realizace/ostatni-kolowratsky-zamek-01.webp" data-lightbox="ostatni-kolowratsky-zamek" data-caption="Kolowratský zámek, Rychnov nad Kněžnou – Malby interiérů (1/5)">
+    <img src="img/realizace/ostatni-kolowratsky-zamek-01-t.webp" width="720" height="540" alt="Kolowratský zámek, Rychnov nad Kněžnou – Malby interiérů" loading="lazy" decoding="async">
+    <span class="project__count">5 fotek</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Kolowratský zámek, Rychnov nad Kněžnou</h3>
+    <p class="project__desc">Malby interiérů</p>
+  </div>
+  <div hidden><a href="img/realizace/ostatni-kolowratsky-zamek-02.webp" data-lightbox="ostatni-kolowratsky-zamek" data-caption="Kolowratský zámek, Rychnov nad Kněžnou – Malby interiérů (2/5)"></a><a href="img/realizace/ostatni-kolowratsky-zamek-03.webp" data-lightbox="ostatni-kolowratsky-zamek" data-caption="Kolowratský zámek, Rychnov nad Kněžnou – Malby interiérů (3/5)"></a><a href="img/realizace/ostatni-kolowratsky-zamek-04.webp" data-lightbox="ostatni-kolowratsky-zamek" data-caption="Kolowratský zámek, Rychnov nad Kněžnou – Malby interiérů (4/5)"></a><a href="img/realizace/ostatni-kolowratsky-zamek-05.webp" data-lightbox="ostatni-kolowratsky-zamek" data-caption="Kolowratský zámek, Rychnov nad Kněžnou – Malby interiérů (5/5)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/ostatni-zamek-kinskych-01.webp" data-lightbox="ostatni-zamek-kinskych" data-caption="Kostelec nad Orlicí – Zámek Kinských">
+    <img src="img/realizace/ostatni-zamek-kinskych-01-t.webp" width="720" height="540" alt="Kostelec nad Orlicí – Zámek Kinských" loading="lazy" decoding="async">
+    <span class="project__count">1 fotka</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Kostelec nad Orlicí</h3>
+    <p class="project__desc">Zámek Kinských</p>
+  </div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/ostatni-fasada-hradec-kralove-01.webp" data-lightbox="ostatni-fasada-hradec-kralove" data-caption="Hradec Králové – Nátěr fasády (1/3)">
+    <img src="img/realizace/ostatni-fasada-hradec-kralove-01-t.webp" width="720" height="540" alt="Hradec Králové – Nátěr fasády" loading="lazy" decoding="async">
+    <span class="project__count">3 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Hradec Králové</h3>
+    <p class="project__desc">Nátěr fasády</p>
+  </div>
+  <div hidden><a href="img/realizace/ostatni-fasada-hradec-kralove-02.webp" data-lightbox="ostatni-fasada-hradec-kralove" data-caption="Hradec Králové – Nátěr fasády (2/3)"></a><a href="img/realizace/ostatni-fasada-hradec-kralove-03.webp" data-lightbox="ostatni-fasada-hradec-kralove" data-caption="Hradec Králové – Nátěr fasády (3/3)"></a></div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/ostatni-fasada-dobruska-01.webp" data-lightbox="ostatni-fasada-dobruska" data-caption="Dobruška – Nátěr fasády">
+    <img src="img/realizace/ostatni-fasada-dobruska-01-t.webp" width="784" height="540" alt="Dobruška – Nátěr fasády" loading="lazy" decoding="async">
+    <span class="project__count">1 fotka</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Dobruška</h3>
+    <p class="project__desc">Nátěr fasády</p>
+  </div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/ostatni-klempirske-prvky-01.webp" data-lightbox="ostatni-klempirske-prvky" data-caption="Hradec Králové – Nátěr klempířských prvků">
+    <img src="img/realizace/ostatni-klempirske-prvky-01-t.webp" width="720" height="544" alt="Hradec Králové – Nátěr klempířských prvků" loading="lazy" decoding="async">
+    <span class="project__count">1 fotka</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Hradec Králové</h3>
+    <p class="project__desc">Nátěr klempířských prvků</p>
+  </div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/ostatni-hala-trebesov-01.webp" data-lightbox="ostatni-hala-trebesov" data-caption="Třebešov – Malba haly">
+    <img src="img/realizace/ostatni-hala-trebesov-01-t.webp" width="771" height="540" alt="Třebešov – Malba haly" loading="lazy" decoding="async">
+    <span class="project__count">1 fotka</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Třebešov</h3>
+    <p class="project__desc">Malba haly</p>
+  </div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/ostatni-silo-zeas-trnov-01.webp" data-lightbox="ostatni-silo-zeas-trnov" data-caption="ZEAS Trnov – Nátěr sila">
+    <img src="img/realizace/ostatni-silo-zeas-trnov-01-t.webp" width="720" height="540" alt="ZEAS Trnov – Nátěr sila" loading="lazy" decoding="async">
+    <span class="project__count">1 fotka</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">ZEAS Trnov</h3>
+    <p class="project__desc">Nátěr sila</p>
+  </div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/ostatni-matrix-01.webp" data-lightbox="ostatni-matrix" data-caption="Matrix a.s. – Nátěr proskleného vchodu">
+    <img src="img/realizace/ostatni-matrix-01-t.webp" width="720" height="1024" alt="Matrix a.s. – Nátěr proskleného vchodu" loading="lazy" decoding="async">
+    <span class="project__count">1 fotka</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">Matrix a.s.</h3>
+    <p class="project__desc">Nátěr proskleného vchodu</p>
+  </div>
+</li>
+<li class="project">
+  <a class="project__link" href="img/realizace/ostatni-zvu-01.webp" data-lightbox="ostatni-zvu" data-caption="ZVU Hradec Králové – Malba pracovny GŘ (1/2)">
+    <img src="img/realizace/ostatni-zvu-01-t.webp" width="720" height="540" alt="ZVU Hradec Králové – Malba pracovny GŘ" loading="lazy" decoding="async">
+    <span class="project__count">2 fotky</span>
+  </a>
+  <div class="project__meta">
+    <h3 class="project__title">ZVU Hradec Králové</h3>
+    <p class="project__desc">Malba pracovny GŘ</p>
+  </div>
+  <div hidden><a href="img/realizace/ostatni-zvu-02.webp" data-lightbox="ostatni-zvu" data-caption="ZVU Hradec Králové – Malba pracovny GŘ (2/2)"></a></div>
+</li>
+<!-- /gen:ostatni -->
+          </ul>
+        </details>
+
+        <div class="materials">
+          <div>
+            <h3 class="materials__title">Pracujeme s&nbsp;materiály</h3>
+            <ul class="materials__list"><li>Kreidezeit</li><li>Remmers</li><li>Delta</li><li>Teknos</li><li>Tikkurila</li><li>Osmo</li></ul>
+          </div>
+          <div>
+            <h3 class="materials__title">Spolupracujeme</h3>
+            <ul class="materials__list">
+              <li><a href="https://www.srubovedomy.cz/" rel="noopener" target="_blank">HANIŠ – Srubové domy</a></li>
+              <li><a href="https://woodchink.eu/" rel="noopener" target="_blank">Woodchink</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ČLÁNKY ========== -->
+    <section class="section articles" id="clanky">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">Napsali o nás</p>
+          <h2 class="section__title">Články a&nbsp;rozhovory</h2>
+          <p class="section__lead">Na odborných článcích o&nbsp;nátěrech a&nbsp;údržbě dřevostaveb se Pavel Ehl podílel s&nbsp;časopisem <em>sruby&nbsp;&amp;&nbsp;roubenky</em> a&nbsp;portálem drevoastavby.cz.</p>
+        </header>
+
+        <article class="feature">
+          <img class="feature__img" src="img/clanky/drevostavba-roku-2013-800.webp" width="800" height="533" alt="Srub Tereza – Dřevostavba roku 2013" loading="lazy">
+          <div class="feature__body">
+            <p class="feature__kicker">Ocenění</p>
+            <h3 class="feature__title">Natřeli jsme Dřevostavbu roku 2013</h3>
+            <p>Vítězem soutěže Dřevostavba roku 2013, kterou pořádá časopis <em>sruby&nbsp;&amp;&nbsp;roubenky</em>, se stal srub Tereza od firmy HANIŠ – Srubové domy. Jeho nátěr je naše práce.</p>
+          </div>
+        </article>
+
+        <ul class="article-list">
+          <li class="article-item">
+            <span class="article-item__year">2024</span>
+            <div class="article-item__body">
+              <h3 class="article-item__title"><a href="https://eshop.drevoastavby.cz/e-shop/33641-casopis-sruby-roubenky-1-2024" rel="noopener" target="_blank">Nátěr je třeba obnovit včas</a></h3>
+              <p class="article-item__source">časopis sruby &amp; ROUBENKY 1/2024</p>
+            </div>
+          </li>
+          <li class="article-item">
+            <span class="article-item__year">2022</span>
+            <div class="article-item__body">
+              <h3 class="article-item__title">Dovolená ve srubu nejen pro rybáře</h3>
+              <p class="article-item__source">drevoastavby.cz</p>
+              <p class="article-item__perex">Nový srub pro krátkodobý pronájem v&nbsp;chorvatském Brodu na Kupi – tentokrát ne o&nbsp;stavbě samotné, ale o&nbsp;jejím povrchovém ošetření.</p>
+            </div>
+          </li>
+          <li class="article-item">
+            <span class="article-item__year">2021</span>
+            <div class="article-item__body">
+              <h3 class="article-item__title">Je lepší dřevěné stěny v&nbsp;interiéru dřevostavby natírat, nebo ponechat surové?</h3>
+              <p class="article-item__source">drevoastavby.cz</p>
+              <p class="article-item__perex">Přírodní dřevo na každém kroku je důvod, proč si lidé vybírají dům z&nbsp;masivu. I&nbsp;dřevěné stěny v&nbsp;interiéru ale můžeme nátěrem doladit.</p>
+            </div>
+          </li>
+          <li class="article-item">
+            <span class="article-item__year">2019</span>
+            <div class="article-item__body">
+              <h3 class="article-item__title">Masivní podlaha v&nbsp;dřevostavbě – vše, co jste kdy chtěli vědět o&nbsp;dřevěné podlaze</h3>
+              <p class="article-item__source">drevoastavby.cz</p>
+            </div>
+          </li>
+          <li class="article-item">
+            <span class="article-item__year">2019</span>
+            <div class="article-item__body">
+              <h3 class="article-item__title"><a href="https://www.drevoastavby.cz/o-drevostavbach/ochrana-dreva/renovace-nateru-masivni-drevostavby-krok-za-krokem" rel="noopener" target="_blank">Renovace nátěru masivní dřevostavby krok za krokem</a></h3>
+              <p class="article-item__source">drevoastavby.cz</p>
+              <p class="article-item__perex">Co dělat, když nátěr nebyl kvalitní nebo dům nebyl dlouho udržovaný? První rada zní: experimentování na vlastní pěst se nevyplácí.</p>
+            </div>
+          </li>
+          <li class="article-item">
+            <span class="article-item__year">2016</span>
+            <div class="article-item__body">
+              <h3 class="article-item__title">Stavba srubů a&nbsp;roubenek – masivní dřevo znovu ožívá</h3>
+              <p class="article-item__source">drevoastavby.cz</p>
+            </div>
+          </li>
+          <li class="article-item">
+            <span class="article-item__year">2016</span>
+            <div class="article-item__body">
+              <h3 class="article-item__title">Natřete to dřevu! Jak chránit dřevo před vlivem škůdců a&nbsp;klimatu</h3>
+              <p class="article-item__source">drevoastavby.cz</p>
+            </div>
+          </li>
+          <li class="article-item">
+            <span class="article-item__year">2015</span>
+            <div class="article-item__body">
+              <h3 class="article-item__title"><a href="clanky/naterac-drevenych-staveb.html">Natěrač dřevěných staveb</a></h3>
+              <p class="article-item__source">rozhovor, časopis sruby &amp; roubenky</p>
+              <p class="article-item__perex">Jak se z&nbsp;mladého člověka stane natěrač-profesionál, proč brousit a&nbsp;natírat ručně a&nbsp;jak dlouho nátěry vydrží.</p>
+            </div>
+          </li>
+          <li class="article-item">
+            <span class="article-item__year">2014</span>
+            <div class="article-item__body">
+              <h3 class="article-item__title"><a href="clanky/jak-se-vyvarovat-vadam-nateru.html">Jak se vyvarovat vadám nátěrů</a></h3>
+              <p class="article-item__source">časopis sruby &amp; roubenky 2/2014</p>
+              <p class="article-item__perex">Kdo odpovídá za vady nátěru – dodavatel barvy, nebo firma, která ji nanesla? A&nbsp;podle čeho vybrat nátěrový systém?</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== O NÁS ========== -->
+    <section class="section about" id="o-nas">
+      <div class="container about__inner">
+        <div class="about__text">
+          <p class="section__kicker">O nás</p>
+          <h2 class="section__title">Řemeslo, které děláme s&nbsp;láskou</h2>
+          <p>Firma Ehl nabízí malířské a&nbsp;natěračské práce od roku 1990. Začínali jsme nátěry ocelových konstrukcí, malbami interiérů a&nbsp;fasádami. Od roku 2000 se věnujeme dřevostavbám a&nbsp;nátěry srubů a&nbsp;roubenek se staly naší specialitou.</p>
+          <p>Jezdíme po celé republice – od Krušných hor po Beskydy. Pro konkrétní zakázku vám rádi připravíme přesný rozpočet.</p>
+        </div>
+        <blockquote class="quote">
+          <p>„My všechno brousíme i&nbsp;natíráme ručně. Vetřením štětcem do povrchu dřeva se barva lépe ukotví a&nbsp;přilne než při pouhém nástřiku.“</p>
+          <footer>Pavel Ehl, v&nbsp;rozhovoru pro časopis <cite>sruby &amp; roubenky</cite></footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ========== KONTAKT ========== -->
+    <section class="section contact" id="kontakt">
+      <div class="container contact__inner">
+        <div class="contact__intro">
+          <p class="section__kicker">Kontakt</p>
+          <h2 class="section__title">Pošlete nám poptávku</h2>
+          <p>Zavolejte nebo napište. Rozpočet připravíme rychleji, když v&nbsp;e-mailu uvedete:</p>
+          <ul class="checklist">
+            <li>lokalitu stavby,</li>
+            <li>typ stavby (srub, roubenka, dřevostavba) a&nbsp;přibližnou velikost,</li>
+            <li>co je potřeba (broušení, venkovní nátěr, interiér…),</li>
+            <li>a&nbsp;přiložíte několik fotografií současného stavu.</li>
+          </ul>
+        </div>
+        <div class="contact__card">
+          <p class="contact__name">Pavel Ehl</p>
+          <a class="contact__big" href="tel:+420777149562">+420 777 149 562</a>
+          <a class="contact__big" href="mailto:natrito@seznam.cz?subject=Popt%C3%A1vka%20%E2%80%93%20n%C3%A1t%C4%9Br">natrito@seznam.cz</a>
+          <address>Domašín 95<br>518 01 Dobruška</address>
+          <p class="contact__small">IČO: 10501916 · podnikatel zapsaný v&nbsp;živnostenském rejstříku</p>
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="mailto:natrito@seznam.cz?subject=Popt%C3%A1vka%20%E2%80%93%20n%C3%A1t%C4%9Br">Napsat e-mail</a>
+            <a class="btn btn--ghost" href="https://mapy.cz/zakladni?q=Doma%C5%A1%C3%ADn%2095%2C%20Dobru%C5%A1ka" rel="noopener" target="_blank">Zobrazit na mapě</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span class="stripes stripes--small" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <p>© <span data-year>2026</span> Pavel Ehl – NatřiTo · malířské a&nbsp;natěračské práce · IČO 10501916</p>
+      <p><a href="tel:+420777149562">+420 777 149 562</a> · <a href="mailto:natrito@seznam.cz">natrito@seznam.cz</a></p>
+    </div>
+  </footer>
+
+  <!-- Prohlížeč fotek -->
+  <dialog class="lightbox" aria-label="Prohlížeč fotografií">
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" alt="">
+      <figcaption class="lightbox__caption"></figcaption>
+    </figure>
+    <button class="lightbox__btn lightbox__prev" aria-label="Předchozí fotka">‹</button>
+    <button class="lightbox__btn lightbox__next" aria-label="Další fotka">›</button>
+    <button class="lightbox__btn lightbox__close" aria-label="Zavřít">×</button>
+  </dialog>
+
+  <!-- PROTOTYP: přepínač návrhů -->
+  <div class="theme-switch" role="group" aria-label="Návrh vzhledu">
+    <span class="theme-switch__label">Návrh:</span>
+    <button data-set-theme="a" title="Dřevo a len – teplý řemeslný styl">A&nbsp;Dřevo</button>
+    <button data-set-theme="b" title="Severský – moderní, vzdušný">B&nbsp;Sever</button>
+    <button data-set-theme="c" title="Barvy loga – výrazný, kontrastní">C&nbsp;Barvy</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

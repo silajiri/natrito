@@ -1,0 +1,57 @@
+/* ==========================================================================
+   NÁVRH A – „Dřevo a len“
+   Teplý řemeslný styl: lněné pozadí, tmavě hnědé písmo, jantarová (lazurová)
+   akcentní barva, patkové nadpisy. Hero přes celou šířku s fotkou srubu.
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500&family=Source+Sans+3:wght@400;600;700&display=swap&subset=latin-ext");
+
+:root {
+  --bg: #f8f3eb;
+  --surface: #efe5d6;
+  --surface-2: #e4d5bf;
+  --text: #2a1d14;
+  --muted: #6b5747;
+  --line: #dccbb3;
+  --accent: #9a4c1a;
+  --accent-hover: #7b3c13;
+  --on-accent: #fff;
+  --head-bg: rgba(248, 243, 235, .93);
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --font-head: "Fraunces", Georgia, serif;
+  --head-weight: 650;
+  --radius: 6px;
+  --radius-lg: 10px;
+}
+
+/* Hero přes celou šířku */
+.hero { min-height: min(90vh, 860px); display: grid; color: #fff8ee; background: #2a1d14; }
+.hero__media { position: absolute; inset: 0; background-image: url("../img/hero/srub-s-balkonem-2000.webp"); background-position: center 40%; }
+.hero__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(30, 18, 10, .88) 0%, rgba(30, 18, 10, .6) 45%, rgba(30, 18, 10, .1) 80%), linear-gradient(0deg, rgba(30, 18, 10, .75) 0%, rgba(30, 18, 10, 0) 40%); }
+.hero__inner { position: relative; display: flex; flex-direction: column; justify-content: flex-end; gap: 48px; padding-top: 120px; padding-bottom: 44px; }
+.hero__content { max-width: 680px; }
+.hero__eyebrow { color: #f0c58c; }
+.hero__title { font-weight: 500; }
+.hero__title span { font-style: italic; color: #f0c58c; }
+.hero .btn--ghost { color: #fff8ee; }
+.hero .btn--ghost:hover { color: #f0c58c; }
+.hero__facts { padding-top: 24px; border-top: 1px solid rgba(255, 248, 238, .25); }
+.hero__facts strong { color: #f0c58c; font-weight: 500; }
+@media (max-width: 700px) {
+  .hero__media { background-image: url("../img/hero/srub-s-balkonem-1200.webp"); background-position: 30% center; }
+  .hero__media::after { background: linear-gradient(0deg, rgba(30, 18, 10, .92) 10%, rgba(30, 18, 10, .45) 70%, rgba(30, 18, 10, .2) 100%); }
+}
+
+/* Jemná „letokruhová“ textura v pozadí světlých sekcí */
+.process, .about {
+  background-color: var(--surface);
+  background-image: repeating-radial-gradient(ellipse at -10% 120%, transparent 0 22px, rgba(122, 82, 44, .045) 22px 23px);
+}
+.service { background: #fffaf3; border: 1px solid var(--line); }
+.section__kicker { font-family: var(--font-body); }
+.section__title { font-weight: 500; }
+.tip { background: #3b2a1e; color: #f8efe2; }
+.tip__title { color: #f0c58c; }
+.step__num { font-family: var(--font-head); }
+.quote p { font-weight: 500; }
+.site-footer { background: #2a1d14; color: #cdbba5; border-top: 0; }
+.site-footer .stripes { opacity: .9; }

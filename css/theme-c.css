@@ -1,0 +1,89 @@
+/* ==========================================================================
+   NÁVRH C – „Barvy loga“
+   Výrazný, kontrastní styl: tmavé hero s detailem kulatin, úzké verzálkové
+   nadpisy, čtyři barvy z loga EHL jako navigační a dekorativní prvek.
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap&subset=latin-ext");
+
+:root {
+  --bg: #fbfaf7;
+  --surface: #f1eee8;
+  --surface-2: #e4dfd6;
+  --text: #1d1b1a;
+  --muted: #5b5651;
+  --line: #e0dad1;
+  --accent: #c13a33;
+  --accent-hover: #9f2c26;
+  --on-accent: #fff;
+  --dark: #1d1b1a;
+  --head-bg: rgba(255, 255, 255, .96);
+  --font-body: "Barlow", system-ui, sans-serif;
+  --font-head: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --head-weight: 800;
+  --radius: 3px;
+  --radius-lg: 4px;
+}
+h1, h2, .section__title, .step__title, .service__title { text-transform: uppercase; letter-spacing: .01em; }
+
+/* Pruh v barvách loga nad hlavičkou */
+.site-header::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: linear-gradient(90deg, var(--c-green) 0 25%, var(--c-yellow) 25% 50%, var(--c-red) 50% 75%, var(--c-blue) 75%); }
+.brand__name { text-transform: uppercase; font-size: 1.45rem; }
+.site-nav ul a { text-transform: uppercase; font-weight: 600; letter-spacing: .04em; font-size: .9rem; }
+
+/* Tmavé hero */
+.hero { background: var(--dark); color: #fff; min-height: min(86vh, 800px); display: grid; }
+.hero__media { position: absolute; inset: 0; background-image: url("../img/hero/detail-kulatin-2000.webp"); background-position: center; opacity: .55; filter: saturate(1.15); }
+.hero__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(29, 27, 26, .95) 25%, rgba(29, 27, 26, .35) 75%); }
+.hero__inner { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 56px; padding-top: 80px; padding-bottom: 56px; }
+.hero__content { max-width: 760px; }
+.hero__eyebrow { color: var(--c-yellow); }
+.hero__title { font-size: clamp(2.8rem, 8vw, 6rem); line-height: 1.04; }
+.hero__title span { color: var(--c-yellow); }
+.hero .stripes { display: inline-flex; height: 8px; margin: 6px 0 22px; }
+.hero .stripes i { width: 48px; }
+.hero__lead { color: #ddd6cd; }
+.hero .btn--ghost { color: #fff; }
+.hero .btn--ghost:hover { color: var(--c-yellow); }
+.hero__facts { gap: 0; }
+.hero__facts li { padding: 4px 32px 4px 16px; border-left: 4px solid var(--c-green); }
+.hero__facts li:nth-child(2) { border-color: var(--c-yellow); }
+.hero__facts li:nth-child(3) { border-color: var(--c-blue); }
+.hero__facts strong { font-size: 1.9rem; text-transform: uppercase; }
+@media (max-width: 700px) { .hero__media { background-image: url("../img/hero/detail-kulatin-1200.webp"); } }
+
+.btn { text-transform: uppercase; letter-spacing: .05em; font-weight: 700; }
+.section__kicker { display: inline-flex; align-items: center; gap: 10px; color: var(--text); }
+.section__kicker::before { content: ""; width: 28px; height: 6px; background: linear-gradient(90deg, var(--c-green) 0 25%, var(--c-yellow) 25% 50%, var(--c-red) 50% 75%, var(--c-blue) 75%); }
+.section__title { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1; }
+
+/* Služby – každá v jedné barvě loga */
+.service { background: #fff; border-top: 6px solid var(--c-green); box-shadow: var(--shadow); }
+.service:nth-child(2) { border-color: var(--c-yellow); }
+.service:nth-child(3) { border-color: var(--c-red); }
+.service:nth-child(4) { border-color: var(--c-blue); }
+.service__icon { stroke: var(--text); }
+.service__title { font-size: 1.55rem; }
+.tip { background: var(--dark); color: #e9e3da; }
+.tip__title { color: var(--c-yellow); }
+
+.process { background: var(--dark); color: #fff; }
+.process .section__kicker { color: #fff; }
+.process .section__lead, .process .before-after figcaption { color: #bdb5ab; }
+.step { background: #2a2725; }
+.step p { color: #c9c1b7; }
+.step__num { border-radius: 2px; background: var(--c-yellow); color: var(--dark); }
+.step:nth-child(1) .step__num { background: var(--c-green); color: #fff; }
+.step:nth-child(3) .step__num { background: var(--c-red); color: #fff; }
+.step:nth-child(4) .step__num { background: var(--c-blue); color: #fff; }
+.step:first-child::before { background-color: #3a3532; }
+.badge--after { background: var(--c-green); }
+
+.project__title { font-family: var(--font-body); font-weight: 700; text-transform: none; }
+.project__place { color: var(--muted); }
+.more__summary { text-transform: uppercase; }
+.feature { background: var(--dark); color: #fff; }
+.feature__kicker { color: var(--c-yellow); }
+.article-item__year { font-size: 1.4rem; line-height: 1.1; }
+.quote { border-left-width: 8px; border-image: linear-gradient(180deg, var(--c-green) 0 25%, var(--c-yellow) 25% 50%, var(--c-red) 50% 75%, var(--c-blue) 75%) 1; }
+.contact__card { background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow); }
+.site-footer { background: var(--dark); color: #bdb5ab; border: 0; }

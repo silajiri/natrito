@@ -1,0 +1,8 @@
+# Originální fotky a podklady (velké, na web se nahrávají jen zpracované verze z img/)
+assets/
+# Pracovní soubory
+.playwright-mcp/
+__pycache__/
+*.pyc
+Thumbs.db
+.DS_Store
