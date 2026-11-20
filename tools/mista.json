@@ -1,0 +1,166 @@
+{
+ "_napoveda": "Obce, kde jsme pracovali – jen název obce a její střed, žádné konkrétní adresy. Po úpravě spusťte python tools/build.py. Souřadnice: OpenStreetMap (Nominatim). NIKDY sem nepřidávat Vyšehoří ani Zdiměřice.",
+ "mista": [
+  {
+   "obec": "Boží Dar",
+   "lat": 50.4097,
+   "lon": 12.9245
+  },
+  {
+   "obec": "Deštné v Orlických horách",
+   "lat": 50.3049,
+   "lon": 16.3506
+  },
+  {
+   "obec": "Dobruška",
+   "lat": 50.2921,
+   "lon": 16.1605,
+   "sidlo": true
+  },
+  {
+   "obec": "Dobříkov",
+   "lat": 50.0077,
+   "lon": 16.1274
+  },
+  {
+   "obec": "Dubicko",
+   "lat": 49.8281,
+   "lon": 16.9627
+  },
+  {
+   "obec": "Frýdava",
+   "lat": 48.6574,
+   "lon": 14.1577
+  },
+  {
+   "obec": "Hradec Králové",
+   "lat": 50.2092,
+   "lon": 15.8328
+  },
+  {
+   "obec": "Jince",
+   "lat": 49.7861,
+   "lon": 13.9787
+  },
+  {
+   "obec": "Kersko",
+   "lat": 50.1534,
+   "lon": 14.9104
+  },
+  {
+   "obec": "Kolín",
+   "lat": 50.0289,
+   "lon": 15.2012
+  },
+  {
+   "obec": "Kosice",
+   "lat": 50.1797,
+   "lon": 15.535
+  },
+  {
+   "obec": "Kostelec nad Orlicí",
+   "lat": 50.1228,
+   "lon": 16.2122
+  },
+  {
+   "obec": "Kotvina",
+   "lat": 50.3639,
+   "lon": 13.1587
+  },
+  {
+   "obec": "Ktiš",
+   "lat": 48.917,
+   "lon": 14.1327
+  },
+  {
+   "obec": "Liberec",
+   "lat": 50.7703,
+   "lon": 15.0584
+  },
+  {
+   "obec": "Libčice nad Vltavou",
+   "lat": 50.1989,
+   "lon": 14.3624
+  },
+  {
+   "obec": "Loučná nad Desnou",
+   "lat": 50.0716,
+   "lon": 17.0904
+  },
+  {
+   "obec": "Loučná pod Klínovcem",
+   "lat": 50.4188,
+   "lon": 12.9814
+  },
+  {
+   "obec": "Lípa nad Orlicí",
+   "lat": 50.1474,
+   "lon": 16.111
+  },
+  {
+   "obec": "Mnichovo Hradiště",
+   "lat": 50.523,
+   "lon": 14.9741
+  },
+  {
+   "obec": "Pelhřimov",
+   "lat": 49.4309,
+   "lon": 15.2232
+  },
+  {
+   "obec": "Potštejn",
+   "lat": 50.0764,
+   "lon": 16.3225
+  },
+  {
+   "obec": "Prostřední Bečva",
+   "lat": 49.4361,
+   "lon": 18.252
+  },
+  {
+   "obec": "Ptice",
+   "lat": 50.0525,
+   "lon": 14.1663
+  },
+  {
+   "obec": "Rychnov nad Kněžnou",
+   "lat": 50.1633,
+   "lon": 16.2748
+  },
+  {
+   "obec": "Stachy",
+   "lat": 49.1018,
+   "lon": 13.6666
+  },
+  {
+   "obec": "Trnov",
+   "lat": 50.2369,
+   "lon": 16.1528
+  },
+  {
+   "obec": "Týn nad Vltavou",
+   "lat": 49.2234,
+   "lon": 14.4211
+  },
+  {
+   "obec": "Třebešov",
+   "lat": 50.1684,
+   "lon": 16.2041
+  },
+  {
+   "obec": "Velké Popovice",
+   "lat": 49.9225,
+   "lon": 14.6391
+  },
+  {
+   "obec": "Vimperk",
+   "lat": 49.0527,
+   "lon": 13.7742
+  },
+  {
+   "obec": "Zdobnice",
+   "lat": 50.2381,
+   "lon": 16.4079
+  }
+ ]
+}

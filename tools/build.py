@@ -16,6 +16,7 @@ import html
 import json
 import re
 import sys
+import urllib.parse
 from pathlib import Path
 
 from PIL import Image, ImageOps
@@ -172,6 +173,44 @@ def card_html(p, outs, place_first=False):
     )
 
 
+def map_html():
+    """Mapa ČR s obcemi, kde jsme pracovali (inline SVG, bez externích skriptů).
+    Každá obec odkazuje na Mapy.cz. Data: tools/mista.json a tools/cz-hranice.json."""
+    import math
+    mista = json.loads((ROOT / "tools" / "mista.json").read_text(encoding="utf-8"))["mista"]
+    border = json.loads((ROOT / "tools" / "cz-hranice.json").read_text(encoding="utf-8"))["body"]
+    k, kx = 100, math.cos(math.radians(49.8))
+    lon0, lat0 = 12.05, 51.08
+
+    def xy(lon, lat):
+        return round((lon - lon0) * kx * k, 1), round((lat0 - lat) * k, 1)
+
+    pts = [xy(lon, lat) for lon, lat in border]
+    w = max(p[0] for p in pts) + 6
+    h = max(p[1] for p in pts) + 6
+    d = "M" + " L".join(f"{x},{y}" for x, y in pts) + " Z"
+    e = html.escape
+    marks = []
+    for m in sorted(mista, key=lambda m: m.get("sidlo", False)):   # sídlo kreslit nakonec (navrch)
+        x, y = xy(m["lon"], m["lat"])
+        url = f"https://mapy.cz/zakladni?q={urllib.parse.quote(m['obec'])}&x={m['lon']}&y={m['lat']}&z=12"
+        anchor = "end" if x > w * 0.8 else "start"
+        tx = x - 7 if anchor == "end" else x + 7
+        label = m["obec"] + (" – sídlo firmy" if m.get("sidlo") else "")
+        cls = "map__pt map__pt--home" if m.get("sidlo") else "map__pt"
+        marks.append(
+            f'<a class="{cls}" href="{url}" target="_blank" rel="noopener" aria-label="{e(label)} na Mapy.cz">'
+            f'<circle cx="{x}" cy="{y}" r="{6 if m.get("sidlo") else 4.2}"/>'
+            f'<text x="{tx}" y="{y + 4}" text-anchor="{anchor}">{e(label)}</text></a>')
+    svg = (f'<svg class="map__svg" viewBox="-6 -6 {w + 6:.0f} {h + 6:.0f}" role="img" aria-labelledby="map-title">'
+           f'<title id="map-title">Mapa České republiky s obcemi, kde jsme pracovali</title>'
+           f'<path class="map__land" d="{d}"/>' + "".join(marks) + "</svg>")
+    items = "".join(
+        f'<li><a href="https://mapy.cz/zakladni?q={urllib.parse.quote(m["obec"])}&x={m["lon"]}&y={m["lat"]}&z=12" '
+        f'target="_blank" rel="noopener">{e(m["obec"])}</a></li>' for m in sorted(mista, key=lambda m: m["obec"]))
+    return svg + f'\n<ul class="map__list">{items}</ul>'
+
+
 def cleanup(used):
     """Smaže z img/realizace soubory, které už nepatří k žádné realizaci."""
     for f in (ROOT / "img" / "realizace").glob("*.webp"):
@@ -194,6 +233,7 @@ def main():
             used.update(x for o in outs for x in (o["big"], o["th"]))
             cards.append(card_html(p, outs, place_first=(key != "realizace")))
         fragments[key] = "\n".join(cards)
+    fragments["mapa"] = map_html()
     print("[úklid]")
     cleanup(used)
     CACHE_FILE.write_text(json.dumps(CACHE, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")

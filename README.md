@@ -14,6 +14,8 @@ js/main.js            menu, prohlížeč fotek
 img/                  zpracované obrázky pro web (generuje tools/build.py)
 favicon.ico, img/favicon.svg, img/apple-touch-icon.png
 tools/realizace.json  seznam realizací (popisky, pořadí, fotky)
+tools/mista.json      obce na mapě „Kde jsme pracovali“ (jen obec + souřadnice středu)
+tools/cz-hranice.json obrys ČR pro mapu (© přispěvatelé OpenStreetMap)
 tools/build.py        zpracování fotek + vložení galerií do index.html
 assets/               originály (NEJSOU v gitu)
 ```
@@ -31,6 +33,11 @@ assets/               originály (NEJSOU v gitu)
    `id` = název výsledných souborů (rok-měsíc-popis, bez diakritiky). První fotka je titulní.
 3. Spusťte `python tools/build.py` (potřebuje `pip install Pillow`).
    Vytvoří `img/realizace/<id>-01.webp` (velká) a `-01-t.webp` (náhled) a aktualizuje `index.html`.
+
+## Přidání obce na mapu
+
+Do `tools/mista.json` přidejte `{ "obec": "Název", "lat": 50.123, "lon": 15.456 }`
+(souřadnice středu obce, např. z Mapy.cz) a spusťte `python tools/build.py`.
 
 ## Lokální náhled
 
